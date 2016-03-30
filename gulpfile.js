@@ -4,6 +4,7 @@
  */
 
 var gulp = require('gulp');
+var pkg = require('./package.json');
 
 //加载所有 gulp 插件, 插件以 GP 的属性方式调用
 //var GP = require('gulp-load-plugins')();
@@ -13,6 +14,7 @@ var cache = require('gulp-cache'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
     cssmin = require('gulp-cssmin'),
+    header = require('gulp-header'),
     htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
     jshint = require('gulp-jshint'),
@@ -22,6 +24,19 @@ var cache = require('gulp-cache'),
     revCollector = require('gulp-rev-collector'),
     uglify = require('gulp-uglify'),
     webpack = require('gulp-webpack');
+
+
+/*
+ * 构建文件的注释头
+ */
+var banner = ['/**',
+    ' * Generated on <%= (new Date()).toString()%> by <%= pkg.author %>',
+    ' * @version v<%= pkg.version %>',
+    ' * @link <%= pkg.homepage %>',
+    ' * @license <%= pkg.license %> LICENSE',
+    ' */',
+    ' ',
+    ''].join('\n');
 
 
 /*
@@ -37,6 +52,7 @@ gulp.task('less', function () {
         .pipe(less())                               //- less 文件预处理
         .pipe(cssmin())                             //- css 文件压缩
         .pipe(rev())                                //- 文件名加MD5后缀
+        .pipe(header(banner, {pkg: pkg}))           //- 文档添加注释头
         .pipe(gulp.dest('./dist/styles'))           //- 输出文件至发布路径
         .pipe(rev.manifest('src/rev/rev-manifest.json', {
             base: process.cwd() + '/src/rev',
@@ -61,12 +77,15 @@ gulp.task('imagemin', function () {
 //js压缩合并发布
 gulp.task('scripts', function () {
     console.log('start scripts task');
+    gulp.src('./dist/scripts')
+        .pipe(clean());
     gulp.src('./src/scripts/*.js')
         .pipe(jshint())                             //- js代码检查
         .pipe(jshint.reporter())                    //- 错误报告
         .pipe(webpack(require('./webpack.js')))     //- webpack打包模块
         .pipe(uglify())                             //- js压缩
         .pipe(rev())                                //- 文件名加MD5后缀
+        .pipe(header(banner, {pkg: pkg}))           //- 文档添加注释头
         .pipe(gulp.dest('./dist/scripts'))          //- 输出文件至发布路径
         .pipe(rev.manifest('src/rev/rev-manifest.json', {
             base: process.cwd() + '/src/rev',
@@ -80,15 +99,20 @@ gulp.task('rev', function () {
     gulp.src(['./src/rev/*.json', './src/html/*.html'])
         .pipe(revCollector())                       //- 收集rev-manifest.json文件内需要替换版本的文件信息并替换html模板内引用
         .pipe(htmlmin())                            //- 压缩html
-        .pipe(gulp.dest('./views'));                //- 输出html文件至视图目录
+        .pipe(gulp.dest('./'));                //- 输出html文件至视图目录
 });
 
 //监控
-gulp.task('monitor', function () {
+gulp.task('watch', function () {
    console.log('execute watch and auto-combine task');
     gulp.watch('./src/styles/*.less', ['less']);
     gulp.watch('./src/scripts/*.{js,jsx}', ['scripts']);
     gulp.watch('./src/images/**/*.{png,jpg,gif,ico}', ['imagemin']);
+});
+
+//构建
+gulp.task('build', ['less', 'scripts', 'imagemin'], function () {
+   console.log('start build task');
 });
 
 //清理发布目录
@@ -99,6 +123,6 @@ gulp.task('cleanDist', function () {
 });
 
 //默认任务
-gulp.task('default', ['monitor'], function () {
+gulp.task('default', ['watch'], function () {
     console.log('start monitor task');
 });

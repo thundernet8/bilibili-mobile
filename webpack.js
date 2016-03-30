@@ -18,7 +18,7 @@ module.exports = {
     output: {
         //path: path.dirname() + '/dist/scripts',
         filename: '[name].js'
-        //publicPath: "/js/"				//html引用路径，在这里是本地地址
+        //publicPath: "/dist/scripts/"				//html引用路径，在这里是本地地址
     },
 
     module: {
