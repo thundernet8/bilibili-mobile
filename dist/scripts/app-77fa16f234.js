@@ -5,4 +5,4 @@
  * @license MIT LICENSE
  */
  
-.a{font-size:16px;margin:0}
+webpackJsonp([0,1],[function(n,c){}]);

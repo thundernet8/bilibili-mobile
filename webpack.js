@@ -3,8 +3,11 @@
  */
 
 var path = require("path");
+var webpack = require('webpack');
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js'); //将多个入口文件的公用部分提取为common.js
 
 module.exports = {
+    plugins: [commonsPlugin],
     resolve: {
         root: [path.dirname() + '/src', path.dirname() + 'node_modules'],
         alias: {},
@@ -12,7 +15,7 @@ module.exports = {
     },
 
     entry: {
-        common: './src/scripts/common.js'
+        app: './src/scripts/app.js'
     },
 
     output: {
@@ -33,5 +36,7 @@ module.exports = {
 
     externals: {
         //'jquery': 'jQuery'
+        'react': 'React',
+        'reactDom': 'ReactDOM'
     }
 };

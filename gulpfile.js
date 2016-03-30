@@ -79,7 +79,7 @@ gulp.task('scripts', function () {
     console.log('start scripts task');
     gulp.src('./dist/scripts')
         .pipe(clean());
-    gulp.src('./src/scripts/*.js')
+    gulp.src(['./src/scripts/*.js', './src/components/*.{js,jsx}'])
         .pipe(jshint())                             //- js代码检查
         .pipe(jshint.reporter())                    //- 错误报告
         .pipe(webpack(require('./webpack.js')))     //- webpack打包模块
@@ -99,14 +99,15 @@ gulp.task('rev', function () {
     gulp.src(['./src/rev/*.json', './src/html/*.html'])
         .pipe(revCollector())                       //- 收集rev-manifest.json文件内需要替换版本的文件信息并替换html模板内引用
         .pipe(htmlmin())                            //- 压缩html
-        .pipe(gulp.dest('./'));                //- 输出html文件至视图目录
+        .pipe(gulp.dest('./'));                     //- 输出html文件至视图目录
 });
 
 //监控
 gulp.task('watch', function () {
    console.log('execute watch and auto-combine task');
-    gulp.watch('./src/styles/*.less', ['less']);
-    gulp.watch('./src/scripts/*.{js,jsx}', ['scripts']);
+    gulp.watch('./src/styles/*.less', ['less', 'rev']);
+    gulp.watch('./src/scripts/*.{js,jsx}', ['scripts', 'rev']);
+    gulp.watch('./src/components/**/*.{js,jsx}', ['scripts', 'rev']);
     gulp.watch('./src/images/**/*.{png,jpg,gif,ico}', ['imagemin']);
 });
 
