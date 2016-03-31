@@ -15,7 +15,7 @@ module.exports = {
     },
 
     entry: {
-        app: './src/scripts/app.jsx'
+        app: './src/scripts/index.jsx'
     },
 
     output: {

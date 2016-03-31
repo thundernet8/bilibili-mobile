@@ -11,17 +11,17 @@
 
 window.app = window.app || {};
 
-require('../components/footer');
-
 (function (app){
     'use strict';
 
+    require('../components/generalPart');
+
     var ReactDOM = require('reactDom');
-    var Footer = app.Footer;
+    var GeneralPart = app.GeneralPart;
 
     function render() {
         ReactDOM.render(
-            <Footer />,
+            <GeneralPart />,
             document.getElementById('general-content')
         )
     }
