@@ -96,6 +96,7 @@ gulp.task('scripts', function () {
 
 //html文件内资源文件引用路径替换
 gulp.task('rev', function () {
+    console.log('start rev task');
     gulp.src(['./src/rev/*.json', './src/html/*.html'])
         .pipe(revCollector())                       //- 收集rev-manifest.json文件内需要替换版本的文件信息并替换html模板内引用
         .pipe(htmlmin())                            //- 压缩html
@@ -114,6 +115,10 @@ gulp.task('watch', function () {
 //构建
 gulp.task('build', ['less', 'scripts', 'imagemin'], function () {
    console.log('start build task');
+    gulp.src(['./src/rev/*.json', './src/html/*.html'])
+        .pipe(revCollector())
+        .pipe(htmlmin())
+        .pipe(gulp.dest('./'));
 });
 
 //清理发布目录

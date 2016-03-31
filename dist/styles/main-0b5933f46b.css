@@ -1,5 +1,5 @@
 /**
- * Generated on Wed Mar 30 2016 22:59:43 GMT+0800 (CST) by Wu Xueqian
+ * Generated on Thu Mar 31 2016 13:07:07 GMT+0800 (CST) by WuXueqian
  * @version v0.0.1
  * @link https://github.com/thundernet8/bilibili-mobile
  * @license MIT LICENSE

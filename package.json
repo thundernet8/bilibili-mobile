@@ -23,7 +23,7 @@
     "build": "gulp build",
     "deploy": "gulp deploy"
   },
-  "author": "Wu Xueqian",
+  "author": "WuXueqian",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/thundernet8/bilibili-mobile/issues"
