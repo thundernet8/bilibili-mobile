@@ -34,4 +34,5 @@ window.app = window.app || {};
     });
 
     module.exports = app.Footer;
-})(window.app || {});
+
+})(window.app);

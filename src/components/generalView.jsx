@@ -19,10 +19,10 @@
     var Footer = app.Footer;
 
     /*
-     * 通用界面,包含各个Tab
+     * 首屏视图,包含各个Tab
      */
-    app.GeneralPart = React.createClass({
-        displayName: 'GeneralPart',
+    app.GeneralView = React.createClass({
+        displayName: 'GeneralView',
         render: function (){
             return (
                 <Footer />
@@ -30,6 +30,6 @@
         }
     });
 
-    module.exports = app.GeneralPart;
+    module.exports = app.GeneralView;
 
 })(window.app);

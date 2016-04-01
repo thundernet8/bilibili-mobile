@@ -79,7 +79,8 @@ gulp.task('scripts', function () {
     console.log('start scripts task');
     gulp.src('./dist/scripts')
         .pipe(clean());
-    gulp.src(['./src/scripts/*.js', './src/components/*.{js,jsx}'])
+    //gulp.src(['./src/scripts/*.js', './src/components/*.{js,jsx}'])
+    gulp.src(['./src/scripts/*.js', './src/components/*.js'])
         .pipe(jshint())                             //- js代码检查
         .pipe(jshint.reporter())                    //- 错误报告
         .pipe(webpack(require('./webpack.js')))     //- webpack打包模块
