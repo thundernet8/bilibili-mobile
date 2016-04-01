@@ -27,10 +27,16 @@ module.exports = {
     module: {
       loaders: [{
           test: /\.js$/,
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          query: {
+              presets: ['es2015']
+          }
       }, {
           test: /\.jsx$/,
-          loader: 'babel-loader!jsx-loader?harmony'
+          loader: 'babel-loader!jsx-loader?harmony',
+          query: {
+              presets: ['es2015', 'react']
+          }
       }]
     },
 
