@@ -59,7 +59,7 @@ window.app = window.app || {};
                         </section>
                     </div>
                 </section>
-            )
+            );
         }
     });
 
@@ -73,7 +73,7 @@ window.app = window.app || {};
                 <section id="tab-focus" className="tab-view">
 
                 </section>
-            )
+            );
         }
     });
 
@@ -87,7 +87,7 @@ window.app = window.app || {};
                 <section id="tab-find" className="tab-view">
 
                 </section>
-            )
+            );
         }
     });
 
@@ -101,7 +101,7 @@ window.app = window.app || {};
                 <section id="tab-me" className="tab-view">
 
                 </section>
-            )
+            );
         }
     });
 

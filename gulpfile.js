@@ -81,18 +81,18 @@ gulp.task('scripts', function () {
         .pipe(clean());
     gulp.src(['./src/scripts/*.js', './src/components/*.{js,jsx}'])
     //gulp.src(['./src/scripts/*.js', './src/components/*.js'])
-        .pipe(jshint())                             //- js代码检查
-        .pipe(jshint.reporter())                    //- 错误报告
-        .pipe(webpack(require('./webpack.js')))     //- webpack打包模块
-        .pipe(uglify())                             //- js压缩
-        .pipe(rev())                                //- 文件名加MD5后缀
-        .pipe(header(banner, {pkg: pkg}))           //- 文档添加注释头
-        .pipe(gulp.dest('./dist/scripts'))          //- 输出文件至发布路径
+        .pipe(jshint({linter: require('jshint-jsx').JSXHINT}))                    //- js代码检查
+        .pipe(jshint.reporter())                                                  //- 错误报告
+        .pipe(webpack(require('./webpack.js')))                                   //- webpack打包模块
+        .pipe(uglify())                                                           //- js压缩
+        .pipe(rev())                                                              //- 文件名加MD5后缀
+        .pipe(header(banner, {pkg: pkg}))                                         //- 文档添加注释头
+        .pipe(gulp.dest('./dist/scripts'))                                        //- 输出文件至发布路径
         .pipe(rev.manifest('src/rev/rev-manifest.json', {
             base: process.cwd() + '/src/rev',
             merge: true
-        }))                                         //- 生成一个rev-manifest.json
-        .pipe(gulp.dest('./src/rev'));              //- 将 rev-manifest.json 保存到 rev 目录内
+        }))                                                                       //- 生成一个rev-manifest.json
+        .pipe(gulp.dest('./src/rev'));                                            //- 将 rev-manifest.json 保存到 rev 目录内
 });
 
 //html文件内资源文件引用路径替换
