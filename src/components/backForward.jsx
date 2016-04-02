@@ -3,7 +3,7 @@
  * All right reserved.
  *
  * @author WuXueqian
- * @date 16/4/1 22:00
+ * @date 16/4/2 16:29
  * @license MIT LICENSE
  */
 
@@ -17,19 +17,13 @@
 
 window.app = window.app || {};
 
-import Header from '../components/header.jsx';
-import Footer from '../components/footer.jsx';
+import React from 'react';
 
-/*
- * 视频详情视图
- */
-app.VideoDetailView = React.createClass({
-    displayName: 'VideoDetailView',
+app.BackForward = React.createClass({
     render: function (){
-        return (
-            <Header.HomeHeader />
-        );
+        history.go(-2);
+        return (<div></div>);
     }
 });
 
-export default app.VideoDetailView;
+export default app.BackForward;

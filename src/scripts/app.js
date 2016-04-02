@@ -3,7 +3,7 @@
  * All right reserved.
  *
  * @author WuXueqian
- * @date 16/4/1 22:06
+ * @date 16/4/2 15:51
  * @license MIT LICENSE
  */
 
@@ -13,11 +13,15 @@
 /*jshint trailing: false */
 /*jshint newcap: false */
 
-'use strict';
-var React = require('react');
-var ReactDOM = require('reactDom');
-//require('../components/footer.jsx');
-import Footer from '../components/footer.jsx';
+//APP Entry
 
+import jQuery from 'jquery';
+import React from  'react';
+import {render} from 'react-dom';
+import routes from './routes.jsx';
 
-ReactDOM.render(React.createElement(Footer), document.getElementById('content'));
+jQuery(document).ready(function (){
+    'use strict';
+
+    render(routes, document.getElementById('content'));
+});

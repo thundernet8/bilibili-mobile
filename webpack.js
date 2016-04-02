@@ -27,13 +27,17 @@ module.exports = {
     module: {
       loaders: [{
           test: /\.js$/,
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          exclude: /node_modules/
           //query: {
           //    presets: ['es2015']
           //}
       }, {
           test: /\.jsx$/,
-          loader: 'babel-loader!jsx-loader?harmony'
+          //loader: 'babel-loader!jsx-loader?harmony',
+          loader: 'babel-loader',                       //- babel-loader已经实现了JSX编译
+          exclude: /node_modules/
+          //exclude: /(node_modules|bower_components)/
           //query: {
           //    presets: ['es2015', 'react']
           //}
@@ -43,6 +47,6 @@ module.exports = {
     externals: {
         'jquery': 'jQuery',
         'react': 'React',
-        'reactDom': 'ReactDOM'
+        'react-dom': 'ReactDOM'
     }
 };

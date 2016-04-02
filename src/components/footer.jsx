@@ -7,32 +7,36 @@
  * @license MIT LICENSE
  */
 
+/*jshint esversion: 6 */
+/*jshint quotmark: false */
+/*jshint white: false */
+/*jshint trailing: false */
+/*jshint newcap: false */
+
+'use strict';
+
 window.app = window.app || {};
 
-(function (app){
-    'use strict';
+import React from 'react';
 
-    var React = require('react');
-    var ReactDOM = require('reactDom');
+let Footer = React.createClass({
+    displayName: 'Footer',
+    render: function (){
+        return (
+            <footer className="footer">
+                <div className="inner">
+                    <ul className="footer-tabs">
+                        <li className="footer-tab" id="tab-home">首页</li>
+                        <li className="footer-tab" id="tab-focus">关注</li>
+                        <li className="footer-tab" id="tab-find">发现</li>
+                        <li className="footer-tab" id="tab-me">我的</li>
+                    </ul>
+                </div>
+            </footer>
+        );
+    }
+});
 
-    app.Footer = React.createClass({
-       displayName: 'Footer',
-       render: function (){
-            return (
-                <footer className="footer">
-                    <div className="inner">
-                        <ul className="footer-tabs">
-                            <li className="footer-tab" id="tab-home">首页</li>
-                            <li className="footer-tab" id="tab-focus">关注</li>
-                            <li className="footer-tab" id="tab-find">发现</li>
-                            <li className="footer-tab" id="tab-me">我的</li>
-                        </ul>
-                    </div>
-                </footer>
-            );
-       }
-    });
+app.Footer = Footer;
 
-    module.exports = app.Footer;
-
-})(window.app);
+export default app.Footer;

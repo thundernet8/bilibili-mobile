@@ -6,30 +6,30 @@
  * @date 16/3/31 18:29
  * @license MIT LICENSE
  */
- 
- window.app = window.app || {};
 
-(function (app){
-    'use strict';
+/*jshint esversion: 6 */
+/*jshint quotmark: false */
+/*jshint white: false */
+/*jshint trailing: false */
+/*jshint newcap: false */
 
-    require('../components/header');
-    require('../components/footer');
+'use strict';
 
-    var Header = app.Header;
-    var Footer = app.Footer;
+window.app = window.app || {};
 
-    /*
-     * 首屏视图,包含各个Tab
-     */
-    app.GeneralView = React.createClass({
-        displayName: 'GeneralView',
-        render: function (){
-            return (
-                <Footer />
-            );
-        }
-    });
+import Header from '../components/header.jsx';
+import Footer from '../components/footer.jsx';
 
-    module.exports = app.GeneralView;
+/*
+ * 首屏视图,包含各个Tab
+ */
+app.GeneralView = React.createClass({
+    displayName: 'GeneralView',
+    render: function (){
+        return (
+            <Footer />
+        );
+    }
+});
 
-})(window.app);
+export default app.GeneralView;
