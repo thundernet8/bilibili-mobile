@@ -18,41 +18,35 @@
 window.app = window.app || {};
 
 import React from 'react';
+import Header from './header.jsx';
+
 let Tab = app.Tab || {};
 
 /*
  * 首页Tab
  */
 Tab.HomeTab = React.createClass({
+    displayName: 'HomeTab',
     render: function (){
         return (
             <section id="tab-home" className="tab-view active">
-                /* Tab Header */
-                <header id="tab-home-header" className="tab-view-header">
-                    <div className="inner">
-                        <ul className="segment-titles">
-                            <li id="segment-live-title" className="segment-title active">直播</li>
-                            <li id="segment-recommend-title" className="segment-title">推荐</li>
-                            <li id="segment-bangumi-title" className="segment-title">番剧</li>
-                            <li id="segment-district-title" className="segment-title">分区</li>
-                        </ul>
-                    </div>
-                </header>
-                /* Tab内容容器 */
+                {/* Tab Header */}
+                <Header.HomeHeader />
+                {/* Tab内容容器 */}
                 <div id="tab-home-body" className="tab-view-body segments">
-                    /* Segment-直播 */
+                    {/* Segment-直播 */}
                     <section id="segment-live" className="segment active">
 
                     </section>
-                    /* Segment-推荐 */
+                    {/* Segment-推荐 */}
                     <section id="segment-recommend" className="segment">
 
                     </section>
-                    /* Segment */
+                    {/* Segment */}
                     <section id="segment-bangumi" className="segment">
 
                     </section>
-                    /* Segment-分区 */
+                    {/* Segment-分区 */}
                     <section id="segment-district" className="segment">
 
                     </section>
@@ -67,10 +61,16 @@ Tab.HomeTab = React.createClass({
  * 关注Tab
  */
 Tab.FocusTab = React.createClass({
+    displayName: 'FocusTab',
     render: function (){
         return (
             <section id="tab-focus" className="tab-view">
+                {/* Tab Header */}
+                <Header.FocusHeader />
+                {/* Tab内容容器 */}
+                <div id="tab-focus-body" className="tab-view-body segments">
 
+                </div>
             </section>
         );
     }
@@ -81,6 +81,7 @@ Tab.FocusTab = React.createClass({
  * 发现Tab
  */
 Tab.FindTab = React.createClass({
+    displayName: 'FindTab',
     render: function (){
         return (
             <section id="tab-find" className="tab-view">
@@ -95,10 +96,16 @@ Tab.FindTab = React.createClass({
  * 我的Tab
  */
 Tab.MeTab = React.createClass({
+    displayName: 'MeTab',
     render: function (){
         return (
             <section id="tab-me" className="tab-view">
+                {/* Tab Header */}
+                <Header.MeHeader />
+                {/* Tab内容容器 */}
+                <div id="tab-me-body" className="tab-view-body cells">
 
+                </div>
             </section>
         );
     }

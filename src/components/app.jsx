@@ -20,6 +20,7 @@ window.app = window.app || {};
 import React from 'react';
 
 app.Root = React.createClass({
+    displayName: 'Root',
     render: function () {
         return (
             <div id="app">{this.props.children}</div>

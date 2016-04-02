@@ -28,13 +28,13 @@ Header.HomeHeader = React.createClass({
     displayName: 'HomeHeader',
     render: function (){
         return (
-            <header className="header" id="home-header">
+            <header id="tab-home-header" className="tab-view-header segment-bar">
                 <div className="inner">
-                    <ul className="header-segments">
-                        <li className="header-segment" id="segment-live">直播</li>
-                        <li className="header-segment" id="segment-recommend">推荐</li>
-                        <li className="header-segment" id="segment-bangumi">番剧</li>
-                        <li className="header-segment" id="segment-district">分区</li>
+                    <ul className="segment-titles">
+                        <li id="segment-live-title" className="segment-title active">直播</li>
+                        <li id="segment-recommend-title" className="segment-title">推荐</li>
+                        <li id="segment-bangumi-title" className="segment-title">番剧</li>
+                        <li id="segment-district-title" className="segment-title">分区</li>
                     </ul>
                 </div>
             </header>
@@ -49,12 +49,12 @@ Header.FocusHeader = React.createClass({
     displayName: 'FocusHeader',
     render: function (){
         return (
-            <header className="header" id="focus-header">
+            <header id="tab-focus-header" className="tab-view-header segment-bar">
                 <div className="inner">
-                    <ul className="header-segments">
-                        <li className="header-segment" id="segment-track">追番</li>
-                        <li className="header-segment" id="segment-activity">动态</li>
-                        <li className="header-segment" id="segment-tag">标签</li>
+                    <ul className="segment-titles">
+                        <li id="segment-track-title" className="segment-title active">追番</li>
+                        <li id="segment-activity-title" className="segment-title">动态</li>
+                        <li id="segment-tag-title" className="segment-title">标签</li>
                     </ul>
                 </div>
             </header>
@@ -65,11 +65,11 @@ Header.FocusHeader = React.createClass({
 /*
  * 个人Tab的Header
  */
-Header.SelfHeader = React.createClass({
-    displayName: 'SelfHeader',
+Header.MeHeader = React.createClass({
+    displayName: 'MeHeader',
     render: function (){
         return (
-            <header className="header" id="self-header">
+            <header id="tab-me-header" className="tab-view-header nav-bar">
                 <div className="inner titled-bar">
                     <div className="title-label">我的</div>
                 </div>

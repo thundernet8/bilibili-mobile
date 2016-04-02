@@ -15,7 +15,7 @@
 
 'use strict';
 
-import {Router, Route, hashHistory} from 'react-router';
+import {Router, Route, hashHistory, browserHistory} from 'react-router';
 
 import App from '../components/app.jsx';
 import GeneralView from '../components/generalView.jsx';
@@ -26,9 +26,9 @@ import BackForward from '../components/backForward.jsx';
 //APP路由
 let routes = (
     <Router history={hashHistory}>
-        <Route name="app" path="/app" component={App}>
-            <Route name="generalView" path="/" component={GeneralView}>
-                <Route name="homeTab" path="/home" component={Tab.HomeTab} />
+        <Route name="app" component={App}>
+            <Route name="generalView" component={GeneralView}>
+                <Route name="homeTab" path="/" component={Tab.HomeTab} />
                 <Route name="focusTab" path="/focus" component={Tab.FocusTab} />
                 <Route name="findTab" path="/find" component={Tab.FindTab} />
                 <Route name="meTab" path="/me" component={Tab.MeTab} />

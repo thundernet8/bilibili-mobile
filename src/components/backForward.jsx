@@ -20,6 +20,7 @@ window.app = window.app || {};
 import React from 'react';
 
 app.BackForward = React.createClass({
+    displayName: 'BackForward',
     render: function (){
         history.go(-2);
         return (<div></div>);

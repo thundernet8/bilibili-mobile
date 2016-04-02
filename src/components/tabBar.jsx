@@ -13,33 +13,35 @@
 /*jshint trailing: false */
 /*jshint newcap: false */
 
+'use strict';
+
 window.app = window.app || {};
 
-(function (app){
-    'use strict';
+import React from 'react';
+import {IndexLink, Link} from 'react-router';
 
-    var React = require('react');
+/*
+ * 底部TabBar组件
+ */
 
-    /*
-     * 底部TabBar组件
-     */
-    app.TabBar = React.createClass({
-        render: function (){
-            return (
-              <footer id="general-tab-bar" className="tab-bar">
-                  <div className="inner">
+let TabBar = React.createClass({
+    displayName: 'TabBar',
+    render: function (){
+        return (
+            <footer id="general-tab-bar" className="tab-bar">
+                <div className="inner">
                     <ul className="tab-titles">
-                        <li id="tab-home-title" className="tab-title active">首页</li>
-                        <li id="tab-focus-title" className="tab-title">关注</li>
-                        <li id="tab-find-title" className="tab-title">发现</li>
-                        <li id="tab-me-title" className="tab-title">我的</li>
+                        <li id="tab-home-title" className="tab-title active"><IndexLink to="/" activeClassName="active">首页</IndexLink></li>
+                        <li id="tab-focus-title" className="tab-title"><IndexLink to="/focus" activeClassName="active">关注</IndexLink></li>
+                        <li id="tab-find-title" className="tab-title"><IndexLink to="/find" activeClassName="active">发现</IndexLink></li>
+                        <li id="tab-me-title" className="tab-title"><IndexLink to="/me" activeClassName="active">我的</IndexLink></li>
                     </ul>
-                  </div>
-              </footer>
-            );
-        }
-    });
+                </div>
+            </footer>
+        );
+    }
+});
 
-    module.exports = app.TabBar;
+app.TabBar = TabBar;
 
-})(window.app);
+export default app.TabBar;
