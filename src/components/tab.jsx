@@ -33,7 +33,7 @@ Tab.HomeTab = React.createClass({
                 {/* Tab Header */}
                 <Header.HomeHeader />
                 {/* Tab内容容器 */}
-                <div id="tab-home-body" className="tab-view-body segments">
+                <div id="tab-home-body" className="tab-view-body segments seg-4 transition">
                     {/* Segment-直播 */}
                     <section id="segment-live" className="segment active">
 
@@ -68,7 +68,7 @@ Tab.FocusTab = React.createClass({
                 {/* Tab Header */}
                 <Header.FocusHeader />
                 {/* Tab内容容器 */}
-                <div id="tab-focus-body" className="tab-view-body segments">
+                <div id="tab-focus-body" className="tab-view-body segments seg-3 transition">
 
                 </div>
             </section>

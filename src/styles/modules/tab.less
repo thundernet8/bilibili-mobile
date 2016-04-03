@@ -1,0 +1,97 @@
+/* Tab Modules */
+
+
+.tab-view{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 49px 0;
+  overflow-x: hidden;
+
+  .tab-view-body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+
+    &.seg-2{
+      width: 200%;
+
+      .segment{
+        width: 50%;
+      }
+    }
+
+    &.seg-3{
+      width: 300%;
+
+      .segment{
+        width: e('calc(100% / 3)');
+      }
+    }
+
+    &.seg-4{
+      width: 400%;
+
+      .segment{
+        width: 25%;
+      }
+    }
+
+    &.seg-5{
+      width: 500%;
+
+      .segment{
+        width: 20%;
+      }
+    }
+
+    .segment{
+      display: inline-block;
+      float: left;
+      height: 100%;
+    }
+  }
+}
+
+
+//首页Tab
+#tab-home{
+
+  #segment-live{
+    background: green;
+  }
+
+  #segment-recommend{
+    background: red;
+  }
+
+  #segment-bangumi{
+    background: blue;
+  }
+
+  #segment-district{
+    background: purple;
+  }
+}
+
+
+//关注Tab
+#tab-focus{
+
+}
+
+
+//发现Tab
+#tab-find{
+
+}
+
+
+//我的Tab
+#tab-me{
+
+}

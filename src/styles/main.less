@@ -1,4 +1,74 @@
-.a{
-  font-size: 16px;
-  margin: 0px;
+//base and normalize
+
+*, :before, :after{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+body, html{
+  height: 100%;
+}
+
+body, button, input, select, textarea {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga","kern";
+}
+
+ul, ol, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 10px;
+}
+
+body{
+  position: relative;
+  margin: 0;
+  background: #f5f5f5;
+  font-family: "Helvetica Neue","Lucida Grande",Helvetica,Arial,"Microsoft YaHei","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",Arial,sans-serif;
+  font-weight: 400;
+  color: #343536;
+  font-size: 1.6rem;
+}
+
+a{
+  text-decoration: none;
+  color: #00a1d6;
+  outline: none;
+
+  &:link{
+    text-decoration: none;
+  }
+
+  &:hover{
+    color: #f25d8e;
+  }
+}
+
+#content, #app, #general-view, #tab-view-wrap{
+  height: 100%;
+}
+
+
+//animation
+@import "modules/animation";
+
+
+//segmentBar
+@import "modules/segmentBar";
+
+
+//tabBar
+@import 'modules/tabBar';
+
+
+//tab
+@import "modules/tab";
+
