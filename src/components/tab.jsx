@@ -20,12 +20,66 @@ window.app = window.app || {};
 import React from 'react';
 import Header from './header.jsx';
 
-let Tab = app.Tab || {};
+let Tab = window.app.Tab || {};
+
+/*
+ * 公用函数和对象,添加滑动Handler(High-Order-Component)
+ */
+
+let TabHOC = TabComponent => React.createClass({
+    displayName: 'TabHOC',
+    translateX: 0,
+    preTranslateX: 0,
+    segmentIndex: 0,
+    containerWidth: 0,
+    onTouchStart: function (event){
+        console.log(123);
+        //event.preventDefault();
+
+        this.containerWidth = 320;
+        this.startX = event.touches[0].pageX;
+    },
+    onTouchMove: function (event){
+        const edgeWith = 50;
+        const leftEdge = edgeWith;
+        const rightEdge = -(this.containerWidth + edgeWith);
+        const diffX = event.touches[0].pageX - this.startX;
+        console.log(diffX);
+        this.translateX = this.preTranslateX + diffX;
+        this.translateX = this.translateX > leftEdge ? edgeWith : this.translateX;
+        this.translateX = this.translateX < rightEdge ? rightEdge : this.translateX;
+
+        event.target.style.webkitTransform = `translate3d(${this.translateX}px, 0, 0)`;
+        event.target.style.transform = `translate3d(${this.translateX}px, 0, 0)`;
+    },
+    onTouchEnd: function (event){
+        this.segmentIndex = (this.translateX / this.containerWidth).toFixed(0);
+        this.setState({
+            currentSegmentIndex: Math.abs(this.segmentIndex)
+        });
+    },
+    getInitialState: function () {
+        return {
+            segmentIndex: 0
+        };
+    },
+    render: function (){
+        const props = {
+            touchStart: this.onTouchStart,
+            touchMove: this.onTouchMove,
+            touchEnd: this.onTouchEnd,
+            currentSegmentIndex: this.state.currentSegmentIndex
+        };
+        return (
+            <TabComponent {...props} />
+        );
+    }
+});
 
 /*
  * 首页Tab
  */
-Tab.HomeTab = React.createClass({
+let HomeTab = React.createClass({
     displayName: 'HomeTab',
     getSegmentWrapperClassName: function (){
       switch(this.state.currentSegmentIndex)
@@ -74,13 +128,23 @@ Tab.HomeTab = React.createClass({
           currentSegmentIndex: 0
       };
     },
+    componentWillReceiveProps: function (nextProps){
+        if(nextProps.currentSegmentIndex != this.state.currentSegmentIndex ){
+            this.setState({
+                currentSegmentIndex: nextProps.currentSegmentIndex
+            });
+        }
+    },
+    shouldComponentUpdate: function (nextProps, nextState){
+        return this.props != nextProps || this.state != nextState;
+    },
     render: function (){
         return (
             <section id="tab-home" className="tab-view">
                 {/* Tab Header */}
                 <Header.HomeHeader onSegmentSwitch={this.handleHeaderSegmentSwitch} />
                 {/* Tab内容容器 */}
-                <div id="tab-home-body" className={"tab-view-body transition segments seg-4 " + this.getSegmentWrapperClassName()}>
+                <div id="tab-home-body" className={"tab-view-body transition segments seg-4 " + this.getSegmentWrapperClassName()} onTouchStart={this.props.touchStart} onTouchMove={this.props.touchMove} onTouchEnd={this.props.touchEnd}>
                     {/* Segment-直播 */}
                     <section id="segment-live" className={"segment " + this.judgeActiveClassName(0)}>
 
@@ -100,9 +164,12 @@ Tab.HomeTab = React.createClass({
                 </div>
             </section>
         );
+    },
+    componentWillUnmount: function (){
+        console.log('Component HomeTab will unmount');
     }
 });
-
+Tab.HomeTab = TabHOC(HomeTab);
 
 /*
  * 关注Tab
@@ -152,6 +219,9 @@ Tab.FocusTab = React.createClass({
             currentSegmentIndex: 0
         };
     },
+    shouldComponentUpdate: function (nextProps, nextState){
+        return this.props != nextProps || this.state != nextState;
+    },
     render: function (){
         return (
             <section id="tab-focus" className="tab-view">
@@ -174,6 +244,9 @@ Tab.FocusTab = React.createClass({
                 </div>
             </section>
         );
+    },
+    componentWillUnmount: function (){
+        console.log('Component FocusTab will unmount');
     }
 });
 
@@ -183,12 +256,18 @@ Tab.FocusTab = React.createClass({
  */
 Tab.FindTab = React.createClass({
     displayName: 'FindTab',
+    shouldComponentUpdate: function (nextProps, nextState){
+        return this.props != nextProps || this.state != nextState;
+    },
     render: function (){
         return (
             <section id="tab-find" className="tab-view">
 
             </section>
         );
+    },
+    componentWillUnmount: function (){
+        console.log('Component FindTab will unmount');
     }
 });
 
@@ -198,6 +277,9 @@ Tab.FindTab = React.createClass({
  */
 Tab.MeTab = React.createClass({
     displayName: 'MeTab',
+    shouldComponentUpdate: function (nextProps, nextState){
+        return this.props != nextProps || this.state != nextState;
+    },
     render: function (){
         return (
             <section id="tab-me" className="tab-view">
@@ -209,6 +291,9 @@ Tab.MeTab = React.createClass({
                 </div>
             </section>
         );
+    },
+    componentWillUnmount: function (){
+        console.log('Component MeTab will unmount');
     }
 });
 

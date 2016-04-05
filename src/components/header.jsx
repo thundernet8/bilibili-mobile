@@ -65,7 +65,13 @@ let HeaderHOC = HeaderComponent => React.createClass({
 let HomeHeader = React.createClass({
     displayName: 'HomeHeader',
     getInitialState: function (){
-      return this.props.state;
+        return this.props.state;
+    },
+    componentWillReceiveProps: function(nextProps){
+        this.setState(nextProps.state);
+    },
+    shouldComponentUpdate: function (nextProps, nextState){
+        return this.props != nextProps || this.state != nextState;
     },
     render: function (){
         return (
@@ -93,6 +99,12 @@ let FocusHeader = React.createClass({
     displayName: 'FocusHeader',
     getInitialState: function (){
         return this.props.state;
+    },
+    componentWillReceiveProps: function(nextProps){
+        this.setState(nextProps.state);
+    },
+    shouldComponentUpdate: function (nextProps, nextState){
+        return this.props != nextProps || this.state != nextState;
     },
     render: function (){
         return (
