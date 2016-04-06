@@ -31,26 +31,17 @@ let HeaderHOC = HeaderComponent => React.createClass({
         if(typeof this.props.onSegmentSwitch == 'function'){
             this.props.onSegmentSwitch(index);
         }
-        this.setState({
-            currentSegmentIndex: index
-        });
     },
     judgeActiveClassName: function (index){
-        if(index==this.state.currentSegmentIndex){
+        if(index==this.props.currentSegmentIndex){
             return ' active';
         }
         return '';
     },
-    getInitialState: function () {
-        return {
-            currentSegmentIndex: 0
-        };
-    },
     render: function (){
         const otherProps = {
             switchSegment: this.switchSegment,
-            judgeActiveClassName: this.judgeActiveClassName,
-            state: this.state  //将状态以属性的state键值方式传递给Header组件
+            judgeActiveClassName: this.judgeActiveClassName
         };
         const props = Object.assign(otherProps, this.props);
         return (
@@ -64,12 +55,6 @@ let HeaderHOC = HeaderComponent => React.createClass({
  */
 let HomeHeader = React.createClass({
     displayName: 'HomeHeader',
-    getInitialState: function (){
-        return this.props.state;
-    },
-    componentWillReceiveProps: function(nextProps){
-        this.setState(nextProps.state);
-    },
     shouldComponentUpdate: function (nextProps, nextState){
         return this.props != nextProps || this.state != nextState;
     },
@@ -97,12 +82,6 @@ Header.HomeHeader = HeaderHOC(HomeHeader);
  */
 let FocusHeader = React.createClass({
     displayName: 'FocusHeader',
-    getInitialState: function (){
-        return this.props.state;
-    },
-    componentWillReceiveProps: function(nextProps){
-        this.setState(nextProps.state);
-    },
     shouldComponentUpdate: function (nextProps, nextState){
         return this.props != nextProps || this.state != nextState;
     },
