@@ -20,6 +20,7 @@ window.app = window.app || {};
 import React from 'react';
 import Header from './header.jsx';
 import Utils from '../scripts/utils';
+import LiveChannelList from './liveChannelList.jsx';
 
 let Tab = app.Tab || {};
 
@@ -177,7 +178,7 @@ let HomeTab = React.createClass({
                 <div id="tab-home-body" className={"tab-view-body transition segments seg-4 " + this.getSegmentWrapperClassName()} style={this.getSegmentWrapperStyle()} onTouchStart={this.props.touchStart} onTouchMove={this.props.touchMove} onTouchEnd={this.props.touchEnd}>
                     {/* Segment-直播 */}
                     <section id="segment-live" className={"segment " + this.judgeActiveClassName(0)}>
-
+                        <LiveChannelList />
                     </section>
                     {/* Segment-推荐 */}
                     <section id="segment-recommend" className={"segment " + this.judgeActiveClassName(1)}>
