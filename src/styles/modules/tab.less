@@ -168,8 +168,148 @@
     background: blue;
   }
 
-  #segment-district{
-    background: purple;
+  #segment-region{
+    //background: purple;
+    overflow-y: auto;
+
+    #region-items{
+      padding: 10px 0;
+
+      ul{
+
+        li{
+          display: inline-block;
+          margin: 10px auto 5px;
+          width: e('calc(100% / 3)');
+          text-align: center;
+
+          a{
+            color: #343536;
+            font-size: 1.2rem;
+
+            &:hover{
+              color: #343536;
+            }
+          }
+
+          .icon-bg{
+            position: relative;
+            margin: 0 auto 6px;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: #ffffff;
+
+            &:after{
+              content: '';
+              display: block;
+              position: absolute;
+              left: 50%;
+              bottom: -5px;
+              margin-left: -4px;
+              border-left: 6px solid transparent;
+              border-right: 6px solid transparent;
+              border-top: 8px solid #ffffff;
+            }
+          }
+
+          i{
+            display: block;
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+
+          &.live{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_1.png");
+            }
+          }
+
+          &.bangumi{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_2.png");
+            }
+          }
+
+          &.cartoon{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_3.png");
+            }
+          }
+
+          &.music{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_4.png");
+            }
+          }
+
+          &.dance{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_5.png");
+            }
+          }
+
+          &.game{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_6.png");
+            }
+          }
+
+          &.tech{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_7.png");
+            }
+          }
+
+          &.entertainment{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_8.png");
+            }
+          }
+
+          &.guichu{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_9.png");
+            }
+          }
+
+          &.movie{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_10.png");
+            }
+          }
+
+          &.tv{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_11.png");
+            }
+          }
+
+          &.fashion{
+
+            i{
+              background-image: url("../images/icons/home_region_icon_12.png");
+            }
+          }
+        }
+      }
+    }
   }
 }
 

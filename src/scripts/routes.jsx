@@ -22,6 +22,7 @@ import GeneralView from '../components/generalView.jsx';
 import VideoDetailView from '../components/videoDetailView.jsx';
 import TopicDetailView from '../components/topicDetailView.jsx';
 import LiveChannelView from '../components/liveChannelView.jsx';
+import RegionView from '../components/regionView.jsx';
 import Tab from '../components/tab.jsx';
 import BackForward from '../components/backForward.jsx';
 
@@ -38,6 +39,7 @@ let routes = (
             <Route name="videoDetailView" path="/video/:id" component={VideoDetailView} />
             <Route name="topic" path="/article/:id" component={TopicDetailView} />
             <Route name="liveChannel" path="/live/channel/:id" component={LiveChannelView} />
+            <Route name="region" path="/region/:name" component={RegionView} />
             <Route name="back" path="/backForward" component={BackForward} />
         </Route>
     </Router>

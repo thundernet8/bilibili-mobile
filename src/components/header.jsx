@@ -66,7 +66,7 @@ let HomeHeader = React.createClass({
                         <li id="segment-live-title" className={"segment-title transition"+this.props.judgeActiveClassName(0)} onClick={this.props.switchSegment.bind(null, 0)}>直播</li>
                         <li id="segment-recommend-title" className={"segment-title transition"+this.props.judgeActiveClassName(1)} onClick={this.props.switchSegment.bind(null, 1)}>推荐</li>
                         <li id="segment-bangumi-title" className={"segment-title transition"+this.props.judgeActiveClassName(2)} onClick={this.props.switchSegment.bind(null, 2)}>番剧</li>
-                        <li id="segment-district-title" className={"segment-title transition"+this.props.judgeActiveClassName(3)} onClick={this.props.switchSegment.bind(null, 3)}>分区</li>
+                        <li id="segment-region-title" className={"segment-title transition"+this.props.judgeActiveClassName(3)} onClick={this.props.switchSegment.bind(null, 3)}>分区</li>
                         <span className="slide-border" />
                     </ul>
                 </div>

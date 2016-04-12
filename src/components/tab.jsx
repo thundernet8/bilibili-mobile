@@ -20,7 +20,8 @@ window.app = window.app || {};
 import React from 'react';
 import Header from './header.jsx';
 import Utils from '../scripts/utils';
-import LiveChannelList from './liveChannelList.jsx';
+import LiveChannelList from './homeSegmentLiveChannelList.jsx';
+import RegionList from './homeSegmentRegion.jsx';
 
 let Tab = app.Tab || {};
 
@@ -189,8 +190,8 @@ let HomeTab = React.createClass({
 
                     </section>
                     {/* Segment-分区 */}
-                    <section id="segment-district" className={"segment " + this.judgeActiveClassName(3)}>
-
+                    <section id="segment-region" className={"segment " + this.judgeActiveClassName(3)}>
+                        <RegionList />
                     </section>
                 </div>
             </section>

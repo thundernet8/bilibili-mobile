@@ -24,7 +24,4 @@ jQuery(document).ready(function (){
 
     render(routes, document.getElementById('content'));
 
-    setTimeout(function (){
-        jQuery('#launch').fadeOut(1000);
-    }, 2000);
 });
