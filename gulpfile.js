@@ -23,7 +23,8 @@ var cache = require('gulp-cache'),
     rev = require('gulp-rev'),
     revCollector = require('gulp-rev-collector'),
     uglify = require('gulp-uglify'),
-    webpack = require('gulp-webpack');
+    webpack = require('gulp-webpack'),
+    manifest = require('gulp-manifest');
 
 
 /*
@@ -132,4 +133,17 @@ gulp.task('cleanDist', function () {
 //默认任务
 gulp.task('default', ['watch'], function () {
     console.log('start monitor task');
+});
+
+//HTML5 Cache Manifest
+gulp.task('manifest', function (){
+   gulp.src(['index.html', 'dist/**/*'], {base: './'})
+       .pipe(manifest({
+           hash: true,
+           preferOnline: true,
+           network: ['*'],
+           filename: 'app.manifest',
+           exclude: 'app.manifest'
+       }))
+       .pipe(gulp.dest('./'));
 });

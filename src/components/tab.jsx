@@ -176,7 +176,7 @@ let HomeTab = React.createClass({
                 {/* Tab Header */}
                 <Header.HomeHeader currentSegmentIndex={this.props.currentSegmentIndex} onSegmentSwitch={this.handleHeaderSegmentSwitch} />
                 {/* Tab内容容器 */}
-                <div id="tab-home-body" className={"tab-view-body transition segments seg-4 " + this.getSegmentWrapperClassName()} style={this.getSegmentWrapperStyle()} onTouchStart={this.props.touchStart} onTouchMove={this.props.touchMove} onTouchEnd={this.props.touchEnd}>
+                <div id="tab-home-body" className={"tab-view-body transition segments seg-4 " + this.getSegmentWrapperClassName()} style={this.getSegmentWrapperStyle()} /*onTouchStart={this.props.touchStart} onTouchMove={this.props.touchMove} onTouchEnd={this.props.touchEnd}*/>
                     {/* Segment-直播 */}
                     <section id="segment-live" className={"segment " + this.judgeActiveClassName(0)}>
                         <LiveChannelList />
@@ -270,7 +270,7 @@ let FocusTab = React.createClass({
                 {/* Tab Header */}
                 <Header.FocusHeader currentSegmentIndex={this.props.currentSegmentIndex} onSegmentSwitch={this.handleHeaderSegmentSwitch} />
                 {/* Tab内容容器 */}
-                <div id="tab-focus-body" className={"tab-view-body transition segments seg-3 " + this.getSegmentWrapperClassName()} style={this.getSegmentWrapperStyle()} onTouchStart={this.props.touchStart} onTouchMove={this.props.touchMove} onTouchEnd={this.props.touchEnd}>
+                <div id="tab-focus-body" className={"tab-view-body transition segments seg-3 " + this.getSegmentWrapperClassName()} style={this.getSegmentWrapperStyle()} /*onTouchStart={this.props.touchStart} onTouchMove={this.props.touchMove} onTouchEnd={this.props.touchEnd}*/>
                     {/* Segment-追番 */}
                     <section id="segment-track" className={"segment " + this.judgeActiveClassName(0)}>
 
