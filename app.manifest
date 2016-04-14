@@ -1,7 +1,7 @@
 CACHE MANIFEST
 
 CACHE:
-index.html
+index-offline.html
 dist/images/app-icon72x72@2x.png
 dist/images/favicon.ico
 dist/images/favicon.png
@@ -37,7 +37,11 @@ dist/images/icons/home_region_icon_9.png
 NETWORK:
 *
 
+FALLBACK:
+./ index-offline.html
+index.html index-offline.html
+
 SETTINGS:
 prefer-online
 
-# hash: 6d615a45257885a3eb3b6164c6f8cfe5952a95ab659728850539e859a60e7d74
+# hash: 5b734b67b24802cdce26f8efb5927ff644f75c25f4f1b54b8756201b6e0c4b25

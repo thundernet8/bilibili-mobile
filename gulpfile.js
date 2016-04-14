@@ -137,11 +137,13 @@ gulp.task('default', ['watch'], function () {
 
 //HTML5 Cache Manifest
 gulp.task('manifest', function (){
-   gulp.src(['index.html', 'dist/**/*'], {base: './'})
+   gulp.src(['index-offline.html', 'dist/**/*'], {base: './'})
        .pipe(manifest({
            hash: true,
            preferOnline: true,
            network: ['*'],
+           //fallback: ['//cdn.bootcss.com/jquery/2.2.1/jquery.min.js vender/js/jquery/2.2.1/jquery.min.js', '//cdn.bootcss.com/react/0.14.7/react.js vender/js/react/0.14.7/react.min.js', '//cdn.bootcss.com/react/0.14.7/react-dom.min.js vender/js/react/0.14.7/react-dom.min.js'],
+           fallback: ['./ index-offline.html', 'index.html index-offline.html'],
            filename: 'app.manifest',
            exclude: 'app.manifest'
        }))
