@@ -21,6 +21,7 @@ import {Link} from 'react-router';
 
 
 export default React.createClass({
+    displayName: 'LiveChannelList',
     shouldComponentUpdate: function(){
         return false;
     },

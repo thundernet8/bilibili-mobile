@@ -21,6 +21,7 @@ import React from 'react';
 import Header from './header.jsx';
 import Utils from '../scripts/utils';
 import LiveChannelList from './homeSegmentLiveChannelList.jsx';
+import BangumiHead from './homeSegmentBangumiHead.jsx';
 import RegionList from './homeSegmentRegion.jsx';
 
 let Tab = app.Tab || {};
@@ -187,7 +188,8 @@ let HomeTab = React.createClass({
                     </section>
                     {/* Segment-番剧 */}
                     <section id="segment-bangumi" className={"segment " + this.judgeActiveClassName(2)}>
-
+                        <BangumiHead.HeadOne />
+                        <BangumiHead.HeadTwo />
                     </section>
                     {/* Segment-分区 */}
                     <section id="segment-region" className={"segment " + this.judgeActiveClassName(3)}>

@@ -165,7 +165,124 @@
   }
 
   #segment-bangumi{
-    background: blue;
+    //background: blue;
+
+    #bangumi-sort-head-1{
+      margin-top: 10px;
+      padding: 10px 0;
+      background: #ffffff;
+
+      ul{
+
+        li{
+          display: inline-block;
+          width: 25%;
+          text-align: center;
+
+          a{
+            color: #343536;
+            font-size: 1.2rem;
+          }
+
+          i{
+            display: block;
+            margin: 2px auto;
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+
+          &.serial{
+
+            i{
+              background-image: url("../images/icons/home_bangumi_icon_1.png");
+            }
+          }
+
+          &.completed{
+
+            i{
+              background-image: url("../images/icons/home_bangumi_icon_2.png");
+            }
+          }
+
+          &.domestic{
+
+            i{
+              background-image: url("../images/icons/home_bangumi_icon_3.png");
+            }
+          }
+
+          &.extension{
+
+            i{
+              background-image: url("../images/icons/home_bangumi_icon_4.png");
+            }
+          }
+        }
+      }
+    }
+
+    #bangumi-sort-head-2{
+      padding: 15px 0;
+
+      ul{
+
+        li{
+          display: inline-block;
+          padding: 0 5px;
+          width: e('calc(100% / 3)');
+          text-align: center;
+
+          &:first-child{
+            padding-left: 10px;
+          }
+
+          &:last-child{
+            padding-right: 10px;
+          }
+
+          a{
+            color: #343536;
+            font-size: 1.2rem;
+          }
+
+          i{
+            display: block;
+            margin: 2px auto;
+            width: 100%;
+            height: 40px;
+            background-size: cover;
+            background-position:center center;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+          }
+
+          &.recommend{
+
+            i{
+              background-image: url("../images/icons/home_bangumi_icon_5.png");
+            }
+          }
+
+          &.daily{
+
+            i{
+              background-image: url("../images/icons/home_bangumi_icon_6.png");
+            }
+          }
+
+          &.index{
+
+            i{
+              background-image: url("../images/icons/home_bangumi_icon_7.png");
+            }
+          }
+        }
+      }
+
+    }
   }
 
   #segment-region{

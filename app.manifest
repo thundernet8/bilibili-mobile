@@ -11,8 +11,15 @@ dist/images/launch_bg.jpg
 dist/images/launch_bg.png
 dist/images/launch_splash.png
 dist/images/launcher.jpg
-dist/scripts/app-7913b07abd.js
-dist/styles/main-71e81b4b59.css
+dist/scripts/app-0e5c5c1c67.js
+dist/styles/main-ec62888a3f.css
+dist/images/icons/home_bangumi_icon_1.png
+dist/images/icons/home_bangumi_icon_2.png
+dist/images/icons/home_bangumi_icon_3.png
+dist/images/icons/home_bangumi_icon_4.png
+dist/images/icons/home_bangumi_icon_5.png
+dist/images/icons/home_bangumi_icon_6.png
+dist/images/icons/home_bangumi_icon_7.png
 dist/images/icons/home_live_channel_icon_1.png
 dist/images/icons/home_live_channel_icon_2.png
 dist/images/icons/home_live_channel_icon_3.png
@@ -44,4 +51,4 @@ index.html index-offline.html
 SETTINGS:
 prefer-online
 
-# hash: 5b734b67b24802cdce26f8efb5927ff644f75c25f4f1b54b8756201b6e0c4b25
+# hash: d6737c2d2758d538b569c3fdca9b63f7c291423b65cfb6626a8664527004d639

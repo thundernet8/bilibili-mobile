@@ -20,6 +20,10 @@ import {Link} from 'react-router';
 
 
 export default React.createClass({
+    displayName: 'RegionList',
+    shouldComponentUpdate: function(){
+        return false;
+    },
     render: function(){
         return (
             <section id="region-items">
