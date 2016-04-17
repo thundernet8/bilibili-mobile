@@ -22,6 +22,10 @@ import GeneralView from '../components/generalView.jsx';
 import VideoDetailView from '../components/videoDetailView.jsx';
 import TopicDetailView from '../components/topicDetailView.jsx';
 import LiveChannelView from '../components/liveChannelView.jsx';
+import BangumiChannelView from '../components/bangumiChannelView.jsx';
+import BangumiRecommendView from '../components/bangumiRecommendView.jsx';
+import BangumiDailyView from '../components/bangumiDailyView.jsx';
+import BangumiIndexView from '../components/bangumiIndexView.jsx';
 import RegionView from '../components/regionView.jsx';
 import Tab from '../components/tab.jsx';
 import BackForward from '../components/backForward.jsx';
@@ -38,7 +42,11 @@ let routes = (
             </Route>
             <Route name="videoDetailView" path="/video/:id" component={VideoDetailView} />
             <Route name="topic" path="/article/:id" component={TopicDetailView} />
-            <Route name="liveChannel" path="/live/channel/:id" component={LiveChannelView} />
+            <Route name="liveChannel" path="/live/channel/:name" component={LiveChannelView} />
+            <Route name="bangumi" path="/bangumi/:type" component={BangumiChannelView} />
+            <Route name="bangumi_recommend" path="/bangumi/recommend" component={BangumiRecommendView} />
+            <Route name="bangumi_daily" path="/bangumi/daily" component={BangumiDailyView} />
+            <Route name="bangumi_index" path="/bangumi/index" component={BangumiIndexView} />
             <Route name="region" path="/region/:name" component={RegionView} />
             <Route name="back" path="/backForward" component={BackForward} />
         </Route>
