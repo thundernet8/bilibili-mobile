@@ -16,13 +16,18 @@
 'use strict';
 
 import React from 'react';
+import Header from './header.jsx';
 
 
 export default React.createClass({
+    displayName: 'BangumiRecommendView',
     render: function(){
         return (
-            <div>
-                bangumi recommend view
+            <div id="bangumi-recommend">
+                <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle="番剧推荐" />
+                <section className="view-body">
+                    bangumi recommend view
+                </section>
             </div>
         )
     }

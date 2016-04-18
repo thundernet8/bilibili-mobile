@@ -16,13 +16,18 @@
 'use strict';
 
 import React from 'react';
+import Header from './header.jsx';
 
 
 export default React.createClass({
+    displayName: 'BangumiDailyView',
     render: function(){
         return (
-            <div>
-                bangumi daily view
+            <div id="bangumi-daily">
+                <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle="每日放送" />
+                <section className="view-body">
+                    bangumi daily view
+                </section>
             </div>
         )
     }

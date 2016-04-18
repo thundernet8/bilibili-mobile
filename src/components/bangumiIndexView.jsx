@@ -16,13 +16,18 @@
 'use strict';
 
 import React from 'react';
+import Header from './header.jsx';
 
 
 export default React.createClass({
+    displayName: 'BangumiIndexView',
     render: function(){
         return (
-            <div>
-                bangumi index view
+            <div id="bangumi-index">
+                <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle="番剧索引" />
+                <section className="view-body">
+                    bangumi index view
+                </section>
             </div>
         )
     }

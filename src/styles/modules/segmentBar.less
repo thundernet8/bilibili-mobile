@@ -19,6 +19,80 @@
   }
 }
 
+.basic-nav-controller{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 49px;
+  line-height: 49px;
+  background: #ffffff;
+  border-bottom: 1px solid #dddddd;
+  z-index: 1010;
+
+  .left-nav-btn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: e('calc(50% - 60px)');
+    height: 100%;
+
+    i{
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      float: left;
+      top: 12px;
+      margin-left: 10px;
+    }
+
+    span{
+      float: left;
+    }
+
+    .left-arrow{
+      background: url("../images/icons/btn_icon_left_arrow.png") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .nav-title{
+    margin: 0 auto;
+    width: 120px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .right-nav-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: e('calc(50% - 60px)');
+    height: 100%;
+
+    i{
+      position: relative;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      float: right;
+      top: 12px;
+      margin-right: 10px;
+    }
+
+    span{
+      float: right;
+    }
+
+    .right-arrow{
+      background: url("../images/icons/btn_icon_right_arrow.png") no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
 .segment-bar{
 
   .segment-titles{

@@ -18,6 +18,7 @@
 window.app = window.app || {};
 
 import React from 'react';
+import {Link} from 'react-router';
 
 let Header = app.Header || {};
 
@@ -113,6 +114,52 @@ Header.MeHeader = React.createClass({
             <header id="tab-me-header" className="tab-view-header nav-bar">
                 <div className="inner titled-bar">
                     <div className="title-label">我的</div>
+                </div>
+            </header>
+        );
+    }
+});
+
+/*
+ * 基本Navigation Controller,带标题以及左右按钮
+ */
+Header.BasicNaviController = React.createClass({
+    displayName: 'BasicNaviController',
+    getDefaultProps: function(){
+        return {
+            leftBtnIconClass: '',
+            leftBtnText: '',
+            leftBtnPath: '',
+            navBarTitle: '',
+            rightBtnIconClass: '',
+            rightBtnText: '',
+            rightBtnPath: ''
+        };
+    },
+    getInitialState: function(){
+        return this.props;
+    },
+    componentWillReceiveProps: function(nextProps){
+        this.setState(nextProps);
+    },
+    render: function(){
+        const LeftLink = this.state.leftBtnPath ? React.createClass({render: function(){return (<Link to={this.props.leftBtnPath}>{this.props.children}</Link>)}}) : React.createClass({render: function(){return (<a href="javascript:">{this.props.children}</a>)}});
+        const RightLink = this.state.rightBtnPath ? React.createClass({render: function(){return (<Link to={this.props.rightBtnPath}>{this.props.children}</Link>)}}) : React.createClass({render: function(){return (<a href="javascript:">{this.props.children}</a>)}});
+
+        return (
+            <header className="basic-nav-controller">
+                <div className="left-nav-btn">
+                    <LeftLink leftBtnPath={this.state.leftBtnPath}>
+                        <i className={'icon ' + this.state.leftBtnIconClass} />
+                        <span className="nav-btn-text">{this.state.leftBtnText}</span>
+                    </LeftLink>
+                </div>
+                <div className="nav-title">{this.state.navBarTitle}</div>
+                <div className="right-nav-btn">
+                    <RightLink rightBtnPath={this.state.rightBtnPath}>
+                        <i className={'icon ' + this.state.rightBtnIconClass} />
+                        <span className="nav-btn-text">{this.state.rightBtnText}</span>
+                    </RightLink>
                 </div>
             </header>
         );
