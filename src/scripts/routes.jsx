@@ -35,7 +35,12 @@ let routes = (
     <Router history={hashHistory}>
         <Route name="app" component={App}>
             <Route name="generalView" component={GeneralView}>
-                <Route name="homeTab" path="/" component={Tab.HomeTab} />
+                <Route name="homeTab" path="/" component={Tab.HomeTab}>
+                    <Route name="bangumi" path="/bangumi/:type" component={BangumiChannelView} />
+                    <Route name="bangumi_recommend" path="/bangumi/recommend" component={BangumiRecommendView} />
+                    <Route name="bangumi_daily" path="/bangumi/daily" component={BangumiDailyView} />
+                    <Route name="bangumi_index" path="/bangumi/index" component={BangumiIndexView} />
+                </Route>
                 <Route name="focusTab" path="/focus" component={Tab.FocusTab} />
                 <Route name="findTab" path="/find" component={Tab.FindTab} />
                 <Route name="meTab" path="/me" component={Tab.MeTab} />
@@ -43,10 +48,7 @@ let routes = (
             <Route name="videoDetailView" path="/video/:id" component={VideoDetailView} />
             <Route name="topic" path="/article/:id" component={TopicDetailView} />
             <Route name="liveChannel" path="/live/channel/:name" component={LiveChannelView} />
-            <Route name="bangumi" path="/bangumi/:type" component={BangumiChannelView} />
-            <Route name="bangumi_recommend" path="/bangumi/recommend" component={BangumiRecommendView} />
-            <Route name="bangumi_daily" path="/bangumi/daily" component={BangumiDailyView} />
-            <Route name="bangumi_index" path="/bangumi/index" component={BangumiIndexView} />
+
             <Route name="region" path="/region/:name" component={RegionView} />
             <Route name="back" path="/backForward" component={BackForward} />
         </Route>

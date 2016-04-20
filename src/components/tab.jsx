@@ -19,6 +19,7 @@ window.app = window.app || {};
 
 import React from 'react';
 import Header from './header.jsx';
+import TabBar from '../components/tabBar.jsx';
 import Utils from '../scripts/utils';
 import LiveChannelList from './homeSegmentLiveChannelList.jsx';
 import BangumiHead from './homeSegmentBangumiHead.jsx';
@@ -100,7 +101,15 @@ let TabHOC = (TabComponent, TabName='homeTab') => React.createClass({
             switchSegmentParentCb: this.switchSegmentCallback
         };
         return (
-            <TabComponent {...props} />
+            <div className="view-list">
+                <div id="general-view">
+                    <div id="tab-view-wrap">
+                        <TabComponent {...props} />
+                    </div>
+                    <TabBar />
+                </div>
+                {this.props.children}
+            </div>
         );
     }
 });

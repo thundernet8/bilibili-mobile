@@ -26,14 +26,7 @@ import TabBar from '../components/tabBar.jsx';
 app.GeneralView = React.createClass({
     displayName: 'GeneralView',
     render: function (){
-        return (
-            <div id="general-view">
-                <div id="tab-view-wrap">
-                    {this.props.children}
-                </div>
-                <TabBar />
-            </div>
-        );
+        return this.props.children;
     }
 });
 
