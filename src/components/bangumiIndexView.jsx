@@ -17,6 +17,7 @@
 
 import React from 'react';
 import Header from './header.jsx';
+import PullRefreshIndicator from './pullRefreshIndicator.jsx';
 
 
 export default React.createClass({
@@ -26,6 +27,7 @@ export default React.createClass({
             <div id="bangumi-index">
                 <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle="番剧索引" />
                 <section className="view-body">
+                    <PullRefreshIndicator pullStatus="unpull" />
                     bangumi index view
                 </section>
             </div>
