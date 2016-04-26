@@ -12,8 +12,8 @@ dist/images/launch_bg.png
 dist/images/launch_splash.png
 dist/images/launcher.jpg
 dist/images/pull_refresh_img.png
-dist/scripts/app-4da8229636.js
-dist/styles/main-b9764458c2.css
+dist/scripts/app-c0d1a79cb0.js
+dist/styles/main-e9ec4f5f74.css
 dist/images/icons/btn_icon_left_arrow.png
 dist/images/icons/btn_icon_right_arrow.png
 dist/images/icons/home_bangumi_icon_1.png
@@ -57,4 +57,4 @@ index.html index-offline.html
 SETTINGS:
 prefer-online
 
-# hash: 36cbe0baf3b620db904eef058fcd0a6095e4de17338d1bb0621684d600600364
+# hash: 4935ac9657e7ed02a9fa554c68c40b40d6c569163378eeb64cfb896b7a907687

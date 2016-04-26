@@ -60,9 +60,10 @@ export default React.createClass({
         //event.preventDefault();
 
         this.startY = event.touches[0].pageY;
+        this.scrollTop = document.body.scrollTop;
     },
     touchMoveHandler: function(event){
-        this.diffY = event.touches[0].pageY-this.startY;
+        this.diffY = event.touches[0].pageY-this.startY-this.scrollTop;
         if(this.diffY>0){
             let marginTop = -120+Math.min(this.diffY, this.props.maxHeight);
             event.currentTarget.querySelector('.pull-refresh-indicator').style.marginTop=`${marginTop}px`;
@@ -78,7 +79,7 @@ export default React.createClass({
                 });
             }
         }
-        console.log(this.diffY);
+        //console.log(this.diffY);
     },
     touchEndHandler: function(event, callback){
         if(this.diffY>=this.props.triggerHeight){
