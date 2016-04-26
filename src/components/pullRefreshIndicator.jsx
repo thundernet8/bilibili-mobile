@@ -34,26 +34,68 @@ export default React.createClass({
                 pulled: 'refresh-circle spin',
                 pulledFinish: 'refresh-done'
             },
-            triggerHeight: 100
+            triggerHeight: 80,
+            maxHeight: 120,
+            initialMarginTop: -120,
+            marginTop: -120
         }
     },
     getInitialState: function(){
         return {
-            pullStatus: 'unpull' //unpull/pulling/pulled/pulledFinish
+            pullStatus: 'unpull', //unpull/pulling/pulled/pulledFinish
+            marginTop: this.props.marginTop
         }
     },
     componentWillReceiveProps: function(nextProps){
         this.setState({
-            pullStatus: this.filterPullStatus(nextProps.pullStatus)
+            pullStatus: this.filterPullStatus(nextProps.pullStatus),
+            marginTop: nextProps.marginTop
         })
     },
     filterPullStatus: function(status){
         const legalStatus = ['unpull', 'pulling', 'pulled', 'pulledFinish'];
         return legalStatus.indexOf(status) > -1 ? status:'unpull';
     },
+    touchStartHandler: function(event){
+        //event.preventDefault();
+
+        this.startY = event.touches[0].pageY;
+    },
+    touchMoveHandler: function(event){
+        this.diffY = event.touches[0].pageY-this.startY;
+        if(this.diffY>0){
+            let marginTop = -120+Math.min(this.diffY, this.props.maxHeight);
+            event.currentTarget.querySelector('.pull-refresh-indicator').style.marginTop=`${marginTop}px`;
+            if(this.diffY>=this.props.triggerHeight){
+                this.setState({
+                    pullStatus: 'pulling',
+                    marginTop: marginTop
+                });
+            }else{
+                this.setState({
+                    pullStatus: 'unpull',
+                    marginTop: marginTop
+                });
+            }
+        }
+        console.log(this.diffY);
+    },
+    touchEndHandler: function(event, callback){
+        if(this.diffY>=this.props.triggerHeight){
+            this.setState({
+                pullStatus: 'pulled'
+            });
+            callback();
+        }else{
+            this.setState({
+                pullStatus: 'unpull',
+                marginTop: this.props.initialMarginTop
+            });
+        }
+    },
     render: function(){
         return (
-            <div className="pull-refresh-indicator">
+            <div className="pull-refresh-indicator" style={{marginTop: this.state.marginTop+'px'}}>
                 <img src="dist/images/pull_refresh_img.png" />
                 <div className="pull-refresh-wrap">
                     <i className={"icon pull-refresh-icon "+this.props.icon[this.state.pullStatus]} />

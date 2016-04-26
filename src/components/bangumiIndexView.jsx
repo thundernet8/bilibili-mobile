@@ -40,13 +40,23 @@ export default React.createClass({
             //dataType: 'jsonp',
             dataType: 'json',
             context: this,
+            //beforeSend: function(xhr, settings){
+            //    xhr.setRequestHeader('User-Agent', 'bilianime/101130 CFNetwork/758.3.15 Darwin/15.4.0');
+            //    xhr.setRequestHeader('Cookie', 'sid=936ny0js');
+            //    xhr.setRequestHeader('Host', 'bangumi.bilibili.com');
+            //},
             success: function(data){
                 let renderList = [];
                 if(data.hasOwnProperty('message') && data.message=='success' && data.hasOwnProperty('result')){
                     let result = data.result;
                     if(!result.length)return;
                     for(let i=0; i<result.length; i++){
-                        renderList.push(<li key={result[i].tag_id} className="tag" data-index={result[i].index} data-tagId={result[i].tag_id} data-tagName={result[i].tag_name}><img src={result[i].cover} /><span className="tag-name">{result[i].tag_name}</span></li>)
+                        renderList.push(
+                            <li key={result[i].tag_id} className="tag" data-index={result[i].index} data-tagId={result[i].tag_id} data-tagName={result[i].tag_name}>
+                                <img src={result[i].cover} />
+                                <span className="tag-name">{result[i].tag_name}</span>
+                            </li>
+                        );
                     }
                 }
 
@@ -77,6 +87,18 @@ export default React.createClass({
     getMoreTagList: function(){
 
     },
+    onTouchStart: function(e){
+        this._pullRefreshIndicator.touchStartHandler(e);
+    },
+    onTouchMove: function(e){
+        this._pullRefreshIndicator.touchMoveHandler(e);
+    },
+    onTouchEnd: function(e){
+        let callback = function(){
+            this.getTagList();
+        }.bind(this);
+        this._pullRefreshIndicator.touchEndHandler(e, callback);
+    },
     componentDidMount: function(){
         this.getTagList();
     },
@@ -93,8 +115,8 @@ export default React.createClass({
         return (
             <div id="bangumi-index">
                 <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle="番剧索引" />
-                <section className="view-body" /*onTouchStart={} onTouchMove={} onTouchEnd={}*/>
-                    <PullRefreshIndicator pullStatus="unpull" />
+                <section className="view-body" onTouchStart={this.onTouchStart} onTouchMove={this.onTouchMove} onTouchEnd={this.onTouchEnd}>
+                    <PullRefreshIndicator ref={(p)=>this._pullRefreshIndicator=p} pullStatus="unpull" marginTop={-120} />
                     {TagList}
                 </section>
             </div>
