@@ -23,6 +23,7 @@ import TabBar from '../components/tabBar.jsx';
 import Utils from '../scripts/utils';
 import LiveChannelList from './homeSegmentLiveChannelList.jsx';
 import BangumiHead from './homeSegmentBangumiHead.jsx';
+import BangumiIndexCats from './homeSegmentBangumiIndexCats.jsx';
 import RegionList from './homeSegmentRegion.jsx';
 
 let Tab = app.Tab || {};
@@ -199,6 +200,7 @@ let HomeTab = React.createClass({
                     <section id="segment-bangumi" className={"segment " + this.judgeActiveClassName(2)}>
                         <BangumiHead.HeadOne />
                         <BangumiHead.HeadTwo />
+                        <BangumiIndexCats />
                     </section>
                     {/* Segment-分区 */}
                     <section id="segment-region" className={"segment " + this.judgeActiveClassName(3)}>

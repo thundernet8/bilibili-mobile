@@ -59,6 +59,7 @@
 <script id="inobounce"></script>
 <script>
     (function(){
+        if(navigator.userAgent.toLowerCase().indexOf("safari")<=0||navigator.userAgent.toLowerCase().indexOf("chrome")>0)return;
         var inobounce = document.createElement('script'),
                 inobounceTarget = document.getElementById('inobounce');
         inobounce.async = true;

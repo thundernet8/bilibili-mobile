@@ -33,10 +33,10 @@ export default React.createClass({
         };
     },
     getTagList: function(){
-        let url = Config.APIType=='json' ? Config.bangumiIndexAPIJSON:Config.bangumiIndexAPIUrl;
+        let url = Config.APIType=='json' ? Config.bangumiTagsAPIJSON:Config.bangumiTagsAPIUrl;
         jQuery.ajax({
             method: 'get',
-            url: url + '&page=1&pagesize=30',
+            url: url + '&page=1&pagesize='+Config.bangumiTagsPerPage,
             //dataType: 'jsonp',
             dataType: 'json',
             context: this,

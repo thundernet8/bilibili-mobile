@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html manifest="app.manifest">
+<!--<html manifest="app.manifest">--> <!-- #TODO restore -->
+<html>
 <head lang="zh-cmn-Hans" data-framework="react">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -56,11 +57,12 @@
 <!--<script src="//cdn.bootcss.com/react/0.14.7/react-dom.min.js"></script>-->
 <script src="vender/js/react/15.0.1/react-dom.min.js"></script>
 <!--script src="vender/js/inobounce/0.1.2/inobounce.min.js"></script-->
-<script src="dist/scripts/app-c0d1a79cb0.js"></script>
+<script src="dist/scripts/app-8eefdbbb44.js"></script>
 
 <script id="inobounce"></script>
 <script>
     (function(){
+        if(navigator.userAgent.toLowerCase().indexOf("safari")<=0||navigator.userAgent.toLowerCase().indexOf("chrome")>0)return;
         var inobounce = document.createElement('script'),
             inobounceTarget = document.getElementById('inobounce');
         inobounce.async = true;
