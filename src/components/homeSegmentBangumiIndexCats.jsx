@@ -18,13 +18,14 @@
 import React from 'react';
 import Config from '../scripts/config';
 import jQuery from 'jquery';
+import Utils from '../scripts/utils';
 
 
 let BangumiCatLatestUpdateBlock = React.createClass({
     displayName: 'BangumiCatLatestUpdateBlock',
     getInitialState: function(){
         return {
-            catIcon: '',
+            catIcon: 'dist/images/icons/home_bangumi_icon_1.png',
             catName: '新番连载',
             moreText: '今日更新',
             updateCount: 0,
@@ -46,7 +47,7 @@ let BangumiCatLatestUpdateBlock = React.createClass({
                     <img src={item.cover} />
                     <h4>{item.title}</h4>
                     <div className="meta">
-                        <span className="time">{item.time}</span>
+                        <span className="time">{Utils.getDateStr(item.last_time)}</span>
                         <span> • </span>
                         <span className="order">第 {item.newest_ep_index} 话</span>
                     </div>
@@ -72,7 +73,7 @@ let BangumiCatLatestUpdateBlock = React.createClass({
                     <div className="more-link">
                         <span className="more-text">{this.state.moreText}</span>
                         <span className="update-count">{this.state.updateCount}</span>
-                        <img className="more-icon" src="dist/images/icons/enter.png" />
+                        <img className="more-icon" src="dist/images/icons/btn_icon_enter.png" />
                     </div>
                 </header>
                 <div className="cat-block-content">
@@ -88,20 +89,20 @@ let BangumiCatOneRowBlock = React.createClass({
     displayName: 'BangumiCatOneRowBlock',
     getInitialState: function(){
         return {
-            catIcon: '',
+            catIcon: 'dist/images/icons/home_bangumi_icon_8.png',
             catID: 0,
             catName: '',
             moreText: '进去看看',
             list: []
         }
     },
-    componentWillReceiveProps: function(nextProps){
-        let catName = nextProps.category.tag_name;
-        let catID = nextProps.category.tag_id;
-        let length = nextProps.list.list.length;
+    componentDidMount: function(){
+        let catName = this.props.category.tag_name;
+        let catID = this.props.category.tag_id;
+        let length = this.props.list.list.length;
         let renderList = [];
         for(let i=0; i<length; i++){
-            let item = nextProps.list.list[i];
+            let item = this.props.list.list[i];
             let meta = item.is_finish ? item.total_count+'话全':'更新至'+item.newest_ep_index+'话';
             renderList.push(
                 <li key={item.bangumi_id}>
@@ -117,6 +118,9 @@ let BangumiCatOneRowBlock = React.createClass({
             list: renderList
         });
     },
+    componentWillReceiveProps: function(nextProps){
+
+    },
     render: function(){
         return (
             <section className="cat-block">
@@ -127,11 +131,11 @@ let BangumiCatOneRowBlock = React.createClass({
                     </div>
                     <div className="more-link">
                         <span className="more-text">{this.state.moreText}</span>
-                        <img className="more-icon" src="dist/images/icons/enter.png" />
+                        <img className="more-icon" src="dist/images/icons/btn_icon_enter.png" />
                     </div>
                 </header>
                 <div className="cat-block-content">
-                    {this.state.list}
+                    <div className="h-wrap" style={{width:this.state.list.length*136+'px'}}>{this.state.list}</div>
                 </div>
             </section>
         );
@@ -165,7 +169,6 @@ export default React.createClass({
                 data = data.result || {};
                 let renderLatestUpdate=[], renderCategories = [];
                 if(data.hasOwnProperty('latestUpdate')){
-                    console.log(data.latestUpdate);
                     renderLatestUpdate.push(
                         <BangumiCatLatestUpdateBlock key="lastUpdate" list={data.latestUpdate.list} updateCount={data.latestUpdate.updateCount} />
                     );

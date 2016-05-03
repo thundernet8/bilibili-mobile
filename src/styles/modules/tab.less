@@ -53,6 +53,7 @@
       display: inline-block;
       float: left;
       height: 100%;
+      overflow-y: auto;
     }
 
     &.seg-1-of-4, &.seg-1-of-3{
@@ -282,6 +283,135 @@
         }
       }
 
+    }
+
+    .bangumi-cat-wrap{
+
+      .cat-block{
+        position: relative;
+        width: 100%;
+        background: #ffffff;
+        padding: 0 5px;
+        margin: 10px auto;
+        box-shadow: 0 0 1px 1px #eaeaea;
+
+        header{
+          padding: 10px;
+          font-size: 1.4rem;
+          line-height: 25px;
+          overflow: hidden;
+          
+          .cat-info{
+            display: inline-block;
+            float: left;
+
+            .cat-icon{
+              width: 20px;
+              height: 20px;
+              margin-right: 5px;
+              vertical-align: middle;
+            }
+          }
+          
+          .more-link{
+            display: inline-block;
+            float: right;
+            color: #888888;
+
+            .update-count{
+              color: @mainColor;
+              padding: 0 5px 0 2px;
+            }
+
+            img{
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+            }
+          }
+        }
+
+        &.latest-update{
+          margin-top: 0;
+
+          .cat-block-content{
+            overflow-x: hidden;
+
+            li{
+              width: 50%;
+
+              img{
+                width: 100%;
+              }
+
+              h4{
+                text-align: left;
+              }
+            }
+          }
+
+        }
+
+        .cat-block-content{
+          overflow-x: scroll;
+          overflow-y: hidden;
+
+          li{
+            list-style: none;
+            display: inline-block;
+            padding: 0 5px;
+            margin: 5px 0;
+
+            img{
+              width: 100%;
+              border-radius: 5px;
+            }
+
+            h4{
+              padding: 0 5px;
+              margin: 0;
+              height: 32px;
+              overflow: hidden;
+              text-align: center;
+              font-weight: normal;
+              font-size: 1.2rem;
+              line-height: 16px;
+            }
+
+            .meta{
+              padding: 0 5px;
+              //color: @mainColor;
+              color: #888888;
+              font-size: 1.2rem;
+              line-height: 20px;
+            }
+          }
+
+          .h-wrap{
+
+            li{
+              width: 136px;
+
+              img{
+                height: 168px;
+              }
+
+              h4{
+                height: auto;
+                line-height: 20px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+
+              .meta{
+                text-align: center;
+                color: @mainColor;
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
     }
   }
 

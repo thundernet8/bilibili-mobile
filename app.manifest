@@ -2,8 +2,6 @@ CACHE MANIFEST
 
 CACHE:
 index-offline.html
-dist/scripts/app-8eefdbbb44.js
-dist/styles/main-e9ec4f5f74.css
 dist/images/app-icon72x72@2x.png
 dist/images/favicon.ico
 dist/images/favicon.png
@@ -14,6 +12,9 @@ dist/images/launch_bg.png
 dist/images/launch_splash.png
 dist/images/launcher.jpg
 dist/images/pull_refresh_img.png
+dist/scripts/app-4e051d7c04.js
+dist/styles/main-197ac3278c.css
+dist/images/icons/btn_icon_enter.png
 dist/images/icons/btn_icon_left_arrow.png
 dist/images/icons/btn_icon_right_arrow.png
 dist/images/icons/home_bangumi_icon_1.png
@@ -57,4 +58,4 @@ index.html index-offline.html
 SETTINGS:
 prefer-online
 
-# hash: 91ef5e5c699b5dd34868ad6ba6de378aad24e7d759a14280d12138f47e612b12
+# hash: 554c306b6f8077fd45a10e14aed0a0bac08051c9cbfd9ccae10b0041b2cf32d5
