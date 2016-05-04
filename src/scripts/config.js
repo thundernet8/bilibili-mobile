@@ -19,12 +19,13 @@ window.app = window.app || {};
 
 app.Config = {
     APIType: 'json',
-    bangumiTagsAPIUrl: 'http://bangumi.bilibili.com/api/tags?actionKey=appkey&appkey=27eb53fc9058f8c3&build=101130&device=phone&platform=ios&sign=94d9ebfe9a568d0238c78d93fc4c7edb&ts=1461582368',
     bangumiTagsAPIJSON: 'test/api/bangumi/tags.json?_=_',
-    liveHomeAPIUrl: 'http://live.bilibili.com/mobile/home?actionKey=appkey&appkey=27eb53fc9058f8c3&build=101130&device=phone&platform=ios&scale=2&sign=079a5f6d575506d0fedf59afa13dea04&ts=1461582272',
+    bangumiTagsAPIUrl: 'http://bangumi.bilibili.com/api/tags?actionKey=appkey&appkey=27eb53fc9058f8c3&build=101130&device=phone&platform=ios&sign=94d9ebfe9a568d0238c78d93fc4c7edb&ts=1461582368',
     bangumiTagsPerPage: 30,
     bangumiIndexAPIJSON: 'test/api/bangumi/index_page.json',
-    bangumiIndexAPIUrl: ''
+    bangumiIndexAPIUrl: '',
+    liveHomeAPIJSON: 'test/api/live/home.json',
+    liveHomeAPIUrl: 'http://live.bilibili.com/mobile/home?actionKey=appkey&appkey=27eb53fc9058f8c3&build=101130&device=phone&platform=ios&scale=2&sign=079a5f6d575506d0fedf59afa13dea04&ts=1461582272'
 };
 
 export default app.Config;

@@ -22,6 +22,7 @@ import Header from './header.jsx';
 import TabBar from '../components/tabBar.jsx';
 import Utils from '../scripts/utils';
 import LiveChannelList from './homeSegmentLiveChannelList.jsx';
+import LiveIndexChannels from './homeSegmentLiveIndexChannels.jsx';
 import BangumiHead from './homeSegmentBangumiHead.jsx';
 import BangumiIndexCats from './homeSegmentBangumiIndexCats.jsx';
 import RegionList from './homeSegmentRegion.jsx';
@@ -123,31 +124,49 @@ let HomeTab = React.createClass({
     getSegmentWrapperClassName: function (){
         switch(this.props.currentSegmentIndex)
         {
+            //case 1:
+            //    return 'seg-2-of-4';
+            //    break;
+            //case 2:
+            //    return 'seg-3-of-4';
+            //    break;
+            //case 3:
+            //    return 'seg-4-of-4';
+            //    break;
+            //default:
+            //    return 'seg-1-of-4';
+            //    break;
             case 1:
-                return 'seg-2-of-4';
+                return 'seg-2-of-3';
                 break;
             case 2:
-                return 'seg-3-of-4';
-                break;
-            case 3:
-                return 'seg-4-of-4';
+                return 'seg-3-of-3';
                 break;
             default:
-                return 'seg-1-of-4';
+                return 'seg-1-of-3';
                 break;
         }
     },
     getSegmentWrapperStyle: function (){
         switch(this.props.currentSegmentIndex)
         {
+            //case 1:
+            //    return {transform: 'translate3d(-25%, 0, 0)'};
+            //    break;
+            //case 2:
+            //    return {transform: 'translate3d(-50%, 0, 0)'};
+            //    break;
+            //case 3:
+            //    return {transform: 'translate3d(-75%, 0, 0)'};
+            //    break;
+            //default:
+            //    return {transform: 'translate3d(0, 0, 0)'};
+            //    break;
             case 1:
-                return {transform: 'translate3d(-25%, 0, 0)'};
+                return {transform: 'translate3d(calc(-100% / 3), 0, 0)'};
                 break;
             case 2:
-                return {transform: 'translate3d(-50%, 0, 0)'};
-                break;
-            case 3:
-                return {transform: 'translate3d(-75%, 0, 0)'};
+                return {transform: 'translate3d(calc(-200% / 3), 0, 0)'};
                 break;
             default:
                 return {transform: 'translate3d(0, 0, 0)'};
@@ -170,7 +189,7 @@ let HomeTab = React.createClass({
             case 0:
             case 1:
             case 2:
-            case 3:
+            //case 3:
                 this.props.switchSegmentParentCb(index);
                 break;
             default:
@@ -187,23 +206,22 @@ let HomeTab = React.createClass({
                 {/* Tab Header */}
                 <Header.HomeHeader currentSegmentIndex={this.props.currentSegmentIndex} onSegmentSwitch={this.handleHeaderSegmentSwitch} />
                 {/* Tab内容容器 */}
-                <div id="tab-home-body" className={"tab-view-body transition segments seg-4 " + this.getSegmentWrapperClassName()} style={this.getSegmentWrapperStyle()} /*onTouchStart={this.props.touchStart} onTouchMove={this.props.touchMove} onTouchEnd={this.props.touchEnd}*/>
+                <div id="tab-home-body" className={"tab-view-body transition segments seg-3 " + this.getSegmentWrapperClassName()} style={this.getSegmentWrapperStyle()} /*onTouchStart={this.props.touchStart} onTouchMove={this.props.touchMove} onTouchEnd={this.props.touchEnd}*/>
                     {/* Segment-直播 */}
                     <section id="segment-live" className={"segment " + this.judgeActiveClassName(0)}>
                         <LiveChannelList />
+                        <LiveIndexChannels />
                     </section>
                     {/* Segment-推荐 */}
-                    <section id="segment-recommend" className={"segment " + this.judgeActiveClassName(1)}>
-
-                    </section>
+                    {/*<section id="segment-recommend" className={"segment " + this.judgeActiveClassName(1)}></section>*/}
                     {/* Segment-番剧 */}
-                    <section id="segment-bangumi" className={"segment " + this.judgeActiveClassName(2)}>
+                    <section id="segment-bangumi" className={"segment " + this.judgeActiveClassName(1)}>
                         <BangumiHead.HeadOne />
                         <BangumiHead.HeadTwo />
                         <BangumiIndexCats />
                     </section>
                     {/* Segment-分区 */}
-                    <section id="segment-region" className={"segment " + this.judgeActiveClassName(3)}>
+                    <section id="segment-region" className={"segment " + this.judgeActiveClassName(2)}>
                         <RegionList />
                     </section>
                 </div>
@@ -311,7 +329,7 @@ Tab.FocusTab = TabHOC(FocusTab, 'focusTab');
 /*
  * 发现Tab
  */
-Tab.FindTab = React.createClass({
+let FindTab = React.createClass({
     displayName: 'FindTab',
     shouldComponentUpdate: function (nextProps, nextState){
         return this.props != nextProps || this.state != nextState;
@@ -328,11 +346,13 @@ Tab.FindTab = React.createClass({
     }
 });
 
+Tab.FindTab = TabHOC(FindTab, 'findTab');
+
 
 /*
  * 我的Tab
  */
-Tab.MeTab = React.createClass({
+let MeTab = React.createClass({
     displayName: 'MeTab',
     shouldComponentUpdate: function (nextProps, nextState){
         return this.props != nextProps || this.state != nextState;
@@ -375,6 +395,10 @@ Tab.MeTab = React.createClass({
         this.getCurrentPosition();
     }
 });
+
+Tab.MeTab = TabHOC(MeTab, 'meTab');
+
+
 
 app.Tab = Tab;
 
