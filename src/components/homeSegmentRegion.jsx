@@ -17,6 +17,7 @@
 
 import React from 'react';
 import {Link} from 'react-router';
+import Utils from '../scripts/utils';
 
 
 export default React.createClass({
@@ -25,10 +26,13 @@ export default React.createClass({
         return false;
     },
     render: function(){
+        const gotoLiveRegion = function(){
+            Utils.setStatus('homeTabSegmentIndex', 0);
+        };
         return (
             <section id="region-items">
                 <ul>
-                    <li className="live"><Link to="/region/live"><div className="icon-bg"><i className="icon" /></div><span>直播</span></Link></li>
+                    <li className="live"><a href="javascript:void 0" onClick={gotoLiveRegion}><div className="icon-bg"><i className="icon" /></div><span>直播</span></a></li>
                     <li className="bangumi"><Link to="/region/bangumi"><div className="icon-bg"><i className="icon" /></div><span>番剧</span></Link></li>
                     <li className="cartoon"><Link to="/region/cartoon"><div className="icon-bg"><i className="icon" /></div><span>动画</span></Link></li>
                     <li className="music"><Link to="/region/music"><div className="icon-bg"><i className="icon" /></div><span>音乐</span></Link></li>

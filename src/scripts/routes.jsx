@@ -21,11 +21,12 @@ import App from '../components/app.jsx';
 import GeneralView from '../components/generalView.jsx';
 import VideoDetailView from '../components/videoDetailView.jsx';
 import TopicDetailView from '../components/topicDetailView.jsx';
-import LiveChannelView from '../components/liveChannelView.jsx';
-import BangumiChannelView from '../components/bangumiChannelView.jsx';
-import BangumiRecommendView from '../components/bangumiRecommendView.jsx';
-import BangumiDailyView from '../components/bangumiDailyView.jsx';
-import BangumiIndexView from '../components/bangumiIndexView.jsx';
+import LiveCategoryView from '../components/homeLiveCategoryView.jsx';
+import LiveUnCategoryView from '../components/homeSegmentLiveUncategoryView.jsx';
+import BangumiChannelView from '../components/homeSegmentBangumiChannelView.jsx';
+import BangumiRecommendView from '../components/homeSegmentBangumiRecommendView.jsx';
+import BangumiDailyView from '../components/homeSegmentBangumiDailyView.jsx';
+import BangumiIndexView from '../components/homeSegmentBangumiIndexView.jsx';
 import RegionView from '../components/regionView.jsx';
 import Tab from '../components/tab.jsx';
 import BackForward from '../components/backForward.jsx';
@@ -36,6 +37,9 @@ let routes = (
         <Route name="app" component={App}>
             <Route name="generalView" component={GeneralView}>
                 <Route name="homeTab" path="/" component={Tab.HomeTab}>
+                    <Route name="liveCategory" path="/live/category/:slug" component={LiveCategoryView} />
+                    <Route name="liveAll" path="/live/all" component={LiveUnCategoryView} />
+
                     <Route name="bangumi" path="/bangumi/:type" component={BangumiChannelView} />
                     <Route name="bangumi_recommend" path="/bangumi/recommend" component={BangumiRecommendView} />
                     <Route name="bangumi_daily" path="/bangumi/daily" component={BangumiDailyView} />
@@ -47,7 +51,6 @@ let routes = (
             </Route>
             <Route name="videoDetailView" path="/video/:id" component={VideoDetailView} />
             <Route name="topic" path="/article/:id" component={TopicDetailView} />
-            <Route name="liveChannel" path="/live/channel/:name" component={LiveChannelView} />
 
             <Route name="region" path="/region/:name" component={RegionView} />
             <Route name="back" path="/backForward" component={BackForward} />

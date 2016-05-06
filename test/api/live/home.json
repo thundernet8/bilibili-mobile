@@ -12,6 +12,7 @@
       "partition": {
         "id": -1,
         "name": "\u70ed\u95e8\u76f4\u64ad",
+        "slug": "hot",
         "sub_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/-1_s_2x.png?2016050301",
           "height": "40",
@@ -79,6 +80,7 @@
       "partition": {
         "id": 11,
         "name": "\u624b\u673a\u76f4\u64ad",
+        "slug": "mobile",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/11_big_2x.png?2016050301",
           "height": "100",
@@ -151,6 +153,7 @@
       "partition": {
         "id": 10,
         "name": "\u5531\u89c1\u821e\u89c1",
+        "slug": "dance",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/10_big_2x.png?2016050301",
           "height": "100",
@@ -223,6 +226,7 @@
       "partition": {
         "id": 6,
         "name": "\u751f\u6d3b\u5a31\u4e50",
+        "slug": "yule",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/6_big_2x.png?2016050301",
           "height": "80",
@@ -295,6 +299,7 @@
       "partition": {
         "id": 9,
         "name": "\u7ed8\u753b\u4e13\u533a",
+        "slug": "paint",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/9_big_2x.png?2016050301",
           "height": "80",
@@ -367,6 +372,7 @@
       "partition": {
         "id": 2,
         "name": "\u5fa1\u5b85\u6587\u5316",
+        "slug": "zhai",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/2_big_2x.png?2016050301",
           "height": "80",
@@ -439,6 +445,7 @@
       "partition": {
         "id": 1,
         "name": "\u5355\u673a\u8054\u673a",
+        "slug": "danji",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/1_big_2x.png?2016050301",
           "height": "80",
@@ -511,6 +518,7 @@
       "partition": {
         "id": 3,
         "name": "\u7f51\u7edc\u6e38\u620f",
+        "slug": "wangyou",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/3_big_2x.png?2016050301",
           "height": "80",
@@ -583,6 +591,7 @@
       "partition": {
         "id": 4,
         "name": "\u7535\u5b50\u7ade\u6280",
+        "slug": "jingji",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/4_big_2x.png?2016050301",
           "height": "80",
@@ -655,6 +664,7 @@
       "partition": {
         "id": 7,
         "name": "\u653e\u6620\u5385",
+        "slug": "fangying",
         "entrance_icon": {
           "src": "http:\/\/static.hdslb.com\/live-static\/images\/mobile\/ios\/phone\/7_big_2x.png?2016050301",
           "height": "80",

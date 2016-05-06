@@ -2,19 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048af311-4dc1-4ff5-84dd-f8603ecdb932" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/homeSegmentLiveIndexChannels.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/live/home.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/app-c427f37e74.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/main-20a75af360.css" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/homeSegmentLiveUncategoryView.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/liveCategoryView.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/live/categories.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/app-3e04a2acb8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/main-08cbb70d3d.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/LiveChannelView.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/homeSegmentLiveChannelList.jsx" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/homeSegmentLiveIndexChannels.jsx" afterPath="$PROJECT_DIR$/src/components/homeSegmentLiveIndexCategories.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index-offline.html" afterPath="$PROJECT_DIR$/index-offline.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/header.jsx" afterPath="$PROJECT_DIR$/src/components/header.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/homeSegmentRegion.jsx" afterPath="$PROJECT_DIR$/src/components/homeSegmentRegion.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tab.jsx" afterPath="$PROJECT_DIR$/src/components/tab.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tabBar.jsx" afterPath="$PROJECT_DIR$/src/components/tabBar.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rev/rev-manifest.json" afterPath="$PROJECT_DIR$/src/rev/rev-manifest.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scripts/config.js" afterPath="$PROJECT_DIR$/src/scripts/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/modules/tabBar.less" afterPath="$PROJECT_DIR$/src/styles/modules/tabBar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scripts/routes.jsx" afterPath="$PROJECT_DIR$/src/scripts/routes.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scripts/utils.js" afterPath="$PROJECT_DIR$/src/scripts/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/main.less" afterPath="$PROJECT_DIR$/src/styles/main.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/modules/tab.less" afterPath="$PROJECT_DIR$/src/styles/modules/tab.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/modules/views.less" afterPath="$PROJECT_DIR$/src/styles/modules/views.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/api/live/home.json" afterPath="$PROJECT_DIR$/test/api/live/home.json" />
     </list>
     <ignored path="bilibili-mobile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,18 +49,32 @@
         <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="110" selection-end-column="54" />
+              <caret line="186" column="16" selection-start-line="186" selection-start-column="16" selection-end-line="202" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/api/live/home.json">
+      <file leaf-file-name="liveCategoryView.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/liveCategoryView.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0">
-              <caret line="8" column="64" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="65" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homeSegmentLiveUncategoryView.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveUncategoryView.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="36" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="36" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,65 +82,53 @@
       <file leaf-file-name="views.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/modules/views.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/modules/tab.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="56.125">
-              <caret line="301" column="27" selection-start-line="301" selection-start-column="27" selection-end-line="301" selection-end-column="27" />
+            <state vertical-scroll-proportion="-27.458334">
+              <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
               <folding>
-                <element signature="e#1284#3019#0" expanded="false" />
-                <element signature="e#3041#3067#0" expanded="false" />
-                <element signature="e#3138#4226#0" expanded="false" />
-                <element signature="e#4252#5399#0" expanded="false" />
-                <element signature="e#8046#11123#0" expanded="false" />
-                <element signature="e#11146#11289#0" expanded="false" />
+                <element signature="e#577#1280#0" expanded="false" />
+                <element signature="e#1334#2403#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tab.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/tab.jsx">
+      <file leaf-file-name="tab.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/styles/modules/tab.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6839237">
+              <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
+              <folding>
+                <element signature="e#6217#6243#0" expanded="false" />
+                <element signature="e#6314#7402#0" expanded="false" />
+                <element signature="e#7428#8575#0" expanded="false" />
+                <element signature="e#8804#9564#0" expanded="false" />
+                <element signature="e#8947#9184#0" expanded="false" />
+                <element signature="e#9031#9172#0" expanded="false" />
+                <element signature="e#9216#9554#0" expanded="false" />
+                <element signature="e#9434#9542#0" expanded="false" />
+                <element signature="e#9920#11185#0" expanded="false" />
+                <element signature="e#10133#10209#0" expanded="false" />
+                <element signature="e#14322#14465#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homeSegmentLiveCategoryList.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="212" column="45" selection-start-line="212" selection-start-column="45" selection-end-line="212" selection-end-column="45" />
+              <caret line="31" column="131" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="131" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/header.jsx">
+      <file leaf-file-name="homeSegmentLiveIndexCategories.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveIndexCategories.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="174" selection-start-line="69" selection-start-column="174" selection-end-line="69" selection-end-column="174" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/main.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="homeSegmentLiveIndexChannels.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveIndexChannels.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.88188976">
-              <caret line="189" column="3" selection-start-line="189" selection-start-column="3" selection-end-line="189" selection-end-column="3" />
+              <caret line="103" column="50" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -142,18 +154,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/scripts/routes.js" />
-        <option value="$PROJECT_DIR$/src/scripts/app.jsx" />
-        <option value="$PROJECT_DIR$/webpack.js" />
-        <option value="$PROJECT_DIR$/src/components/footer.jsx" />
-        <option value="$PROJECT_DIR$/src/components/videoDetailView.jsx" />
         <option value="$PROJECT_DIR$/src/components/app.jsx" />
         <option value="$PROJECT_DIR$/src/components/backForward.jsx" />
         <option value="$PROJECT_DIR$/dist/styles/main-0b5933f46b.css" />
         <option value="$PROJECT_DIR$/src/components/liveCategoryList.jsx" />
         <option value="$PROJECT_DIR$/src/components/TopicDetailView.jsx" />
         <option value="$PROJECT_DIR$/src/components/topicDetailView.jsx" />
-        <option value="$PROJECT_DIR$/src/components/liveChannelView.jsx" />
         <option value="$PROJECT_DIR$/src/components/liveChannelList.jsx" />
         <option value="$PROJECT_DIR$/src/scripts/app.js" />
         <option value="$PROJECT_DIR$/src/components/districtItemView.jsx" />
@@ -161,8 +167,6 @@
         <option value="$PROJECT_DIR$/app.manifest" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiHead.jsx" />
-        <option value="$PROJECT_DIR$/src/components/homeSegmentLiveChannelList.jsx" />
-        <option value="$PROJECT_DIR$/src/components/homeSegmentRegion.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/bangumiChannelView.jsx" />
         <option value="$PROJECT_DIR$/src/styles/modules/segmentBar.less" />
@@ -170,7 +174,6 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/components/bangumiDailyView.jsx" />
         <option value="$PROJECT_DIR$/src/components/generalView.jsx" />
-        <option value="$PROJECT_DIR$/src/scripts/routes.jsx" />
         <option value="$PROJECT_DIR$/src/components/loaderBox.jsx" />
         <option value="$PROJECT_DIR$/src/styles/modules/animation.less" />
         <option value="$PROJECT_DIR$/test/api/bangumi/tags.json" />
@@ -181,18 +184,27 @@
         <option value="$PROJECT_DIR$/src/components/bangumiIndexView.jsx" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiCatBlock.jsx" />
         <option value="$PROJECT_DIR$/src/html/index.html" />
-        <option value="$PROJECT_DIR$/src/styles/modules/views.less" />
-        <option value="$PROJECT_DIR$/src/styles/main.less" />
-        <option value="$PROJECT_DIR$/src/scripts/utils.js" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx" />
-        <option value="$PROJECT_DIR$/src/styles/modules/tab.less" />
-        <option value="$PROJECT_DIR$/src/components/header.jsx" />
         <option value="$PROJECT_DIR$/src/components/tabBar.jsx" />
         <option value="$PROJECT_DIR$/src/styles/modules/tabBar.less" />
-        <option value="$PROJECT_DIR$/test/api/live/home.json" />
-        <option value="$PROJECT_DIR$/src/scripts/config.js" />
         <option value="$PROJECT_DIR$/src/components/tab.jsx" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentLiveIndexChannels.jsx" />
+        <option value="$PROJECT_DIR$/src/styles/main.less" />
+        <option value="$PROJECT_DIR$/src/components/header.jsx" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentRegion.jsx" />
+        <option value="$PROJECT_DIR$/src/scripts/utils.js" />
+        <option value="$PROJECT_DIR$/src/components/liveChannelView.jsx" />
+        <option value="$PROJECT_DIR$/src/scripts/config.js" />
+        <option value="$PROJECT_DIR$/test/api/live/channels.json" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentLiveChannelList.jsx" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentLiveUncategoryView.jsx" />
+        <option value="$PROJECT_DIR$/src/components/liveCategoryView.jsx" />
+        <option value="$PROJECT_DIR$/src/scripts/routes.jsx" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx" />
+        <option value="$PROJECT_DIR$/src/styles/modules/views.less" />
+        <option value="$PROJECT_DIR$/test/api/live/home.json" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentLiveIndexCategories.jsx" />
+        <option value="$PROJECT_DIR$/src/styles/modules/tab.less" />
       </list>
     </option>
   </component>
@@ -248,7 +260,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -450,10 +461,11 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -539,13 +551,14 @@
     <frame x="1280" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20537125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18799368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32678387" sideWeight="0.49815693" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24301966" sideWeight="0.51026857" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32574975" sideWeight="0.49605057" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32678387" sideWeight="0.49815693" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18304034" sideWeight="0.48973143" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18717684" sideWeight="0.48973143" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -553,7 +566,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32574975" sideWeight="0.49605057" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -603,20 +615,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-dom/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-router/lib/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -635,13 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31413612">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/liveChannelView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5301047">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -677,20 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.8836524">
           <caret line="129" column="16" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveChannelList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35346097">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentRegion.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33136967">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -757,13 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bangumiDailyView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="101" selection-start-line="26" selection-start-column="101" selection-end-line="26" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -823,18 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bangumiIndexView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,13 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="48" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bangumiChannelView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
         </state>
       </provider>
     </entry>
@@ -866,42 +821,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/api/bangumi/index_page.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1081" column="20" selection-start-line="1081" selection-start-column="11" selection-end-line="1081" selection-end-column="20" />
-          <folding>
-            <element signature="e#71#39325#0" expanded="false" />
-            <element signature="e#79#5680#0" expanded="false" />
-            <element signature="e#5927#11255#0" expanded="false" />
-            <element signature="e#11293#11495#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/main.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="174" selection-start-line="69" selection-start-column="174" selection-end-line="69" selection-end-column="174" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="192" selection-start-line="34" selection-start-column="192" selection-end-line="34" selection-end-column="192" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,18 +843,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/routes.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/bangumiDailyView.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.3448276">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="30" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/api/live/home.json">
+    <entry file="file://$PROJECT_DIR$/src/components/tab.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="8" column="64" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="65" />
+        <state vertical-scroll-proportion="-3.0674603">
+          <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2605364">
+          <caret line="62" column="44" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentRegion.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4789272">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3678161">
+          <caret line="66" column="42" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="186" column="16" selection-start-line="186" selection-start-column="16" selection-end-line="202" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/main.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019762846">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -940,56 +899,121 @@
     <entry file="file://$PROJECT_DIR$/src/scripts/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tab.jsx">
+    <entry file="file://$PROJECT_DIR$/test/api/live/categories.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="212" column="45" selection-start-line="212" selection-start-column="45" selection-end-line="212" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.020435967">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/bangumiIndexView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.019788919">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/bangumiChannelView.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="110" selection-end-column="54" />
+          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/liveCategoryView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/routes.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/modules/views.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state vertical-scroll-proportion="-27.458334">
+          <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
+          <folding>
+            <element signature="e#577#1280#0" expanded="false" />
+            <element signature="e#1334#2403#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="131" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="131" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveUncategoryView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/live/home.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5735695">
+          <caret line="666" column="25" selection-start-line="666" selection-start-column="25" selection-end-line="666" selection-end-column="25" />
+          <folding>
+            <element signature="e#401#688#0" expanded="false" />
+            <element signature="e#706#1230#0" expanded="false" />
+            <element signature="e#1251#1452#0" expanded="false" />
+            <element signature="e#1471#1629#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveIndexCategories.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="50" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/modules/tab.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="56.125">
-          <caret line="301" column="27" selection-start-line="301" selection-start-column="27" selection-end-line="301" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.6839237">
+          <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
           <folding>
-            <element signature="e#1284#3019#0" expanded="false" />
-            <element signature="e#3041#3067#0" expanded="false" />
-            <element signature="e#3138#4226#0" expanded="false" />
-            <element signature="e#4252#5399#0" expanded="false" />
-            <element signature="e#8046#11123#0" expanded="false" />
-            <element signature="e#11146#11289#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveIndexChannels.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.88188976">
-          <caret line="189" column="3" selection-start-line="189" selection-start-column="3" selection-end-line="189" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#6217#6243#0" expanded="false" />
+            <element signature="e#6314#7402#0" expanded="false" />
+            <element signature="e#7428#8575#0" expanded="false" />
+            <element signature="e#8804#9564#0" expanded="false" />
+            <element signature="e#8947#9184#0" expanded="false" />
+            <element signature="e#9031#9172#0" expanded="false" />
+            <element signature="e#9216#9554#0" expanded="false" />
+            <element signature="e#9434#9542#0" expanded="false" />
+            <element signature="e#9920#11185#0" expanded="false" />
+            <element signature="e#10133#10209#0" expanded="false" />
+            <element signature="e#14322#14465#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -19,6 +19,9 @@
 window.app = window.app || {};
 
 app.Utils = {
+    /**
+     * 利用本地存储实现配置等数据持久化
+     */
     store: function (namespace, data){
         if(data){
             return localStorage.setItem(namespace, JSON.stringify(data));
@@ -28,6 +31,9 @@ app.Utils = {
         return (store && JSON.parse(store)) || {};
     },
 
+    /**
+     * 将时间戳转换为特定的日期字符串
+     */
     getDateStr: function(timestamp){
         const date = new Date(parseInt(timestamp)*1000);
         const now = new Date();
@@ -46,6 +52,46 @@ app.Utils = {
         }else{
             return '晚上 '+('0'+(date.getHours()-12)).slice(-2)+':'+('0'+date.getMinutes()).slice(-2);
         }
+    },
+
+    /**
+     * 应用状态Setter
+     */
+    setStatus: function(property, value){
+        let status = app.Status || {};
+
+        //inform
+        //if(status[property]!=value){
+        //    app.Utils.inform(property, value);
+        //}
+        app.Utils.inform(property, value);
+
+        status[property] = value;
+        app.Status = status;
+
+        //debug
+        console.warn('Set App Status->key: '+property+', value: '+value);
+    },
+
+    /**
+     * 事件订阅与通知
+     */
+    subscribe: function(key, callback){
+        let callbacks = app.Callbacks || {};
+        callbacks[key] = callbacks[key] || [];
+        callbacks[key].push(callback);
+
+        //app.callbacks = Array.from(new Set(callbacks));
+        app.Callbacks = callbacks; //允许重复事件
+    },
+
+    inform: function(key, value){
+        let keyCallbacks = (app.Callbacks || {})[key] || [];
+        if(!keyCallbacks.length) return;
+        keyCallbacks.forEach((cb)=>cb(value));
+
+        //debug
+        console.warn('Inform event for key: '+key);
     }
 };
 

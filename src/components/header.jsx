@@ -19,6 +19,7 @@ window.app = window.app || {};
 
 import React from 'react';
 import {Link} from 'react-router';
+import Utils from '../scripts/utils';
 
 let Header = app.Header || {};
 
@@ -56,6 +57,12 @@ let HeaderHOC = HeaderComponent => React.createClass({
  */
 let HomeHeader = React.createClass({
     displayName: 'HomeHeader',
+    componentDidMount: function(){
+        //订阅观察Segment序号变化
+        Utils.subscribe('homeTabSegmentIndex', function(index){
+            this.props.switchSegment(index);
+        }.bind(this));
+    },
     shouldComponentUpdate: function (nextProps, nextState){
         return this.props != nextProps || this.state != nextState;
     },

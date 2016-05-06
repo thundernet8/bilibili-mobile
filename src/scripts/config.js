@@ -25,7 +25,8 @@ app.Config = {
     bangumiIndexAPIJSON: 'test/api/bangumi/index_page.json',
     bangumiIndexAPIUrl: '',
     liveHomeAPIJSON: 'test/api/live/home.json',
-    liveHomeAPIUrl: 'http://live.bilibili.com/mobile/home?actionKey=appkey&appkey=27eb53fc9058f8c3&build=101130&device=phone&platform=ios&scale=2&sign=079a5f6d575506d0fedf59afa13dea04&ts=1461582272'
+    liveHomeAPIUrl: 'http://live.bilibili.com/mobile/home?actionKey=appkey&appkey=27eb53fc9058f8c3&build=101130&device=phone&platform=ios&scale=2&sign=079a5f6d575506d0fedf59afa13dea04&ts=1461582272',
+    liveCategoriesAPIJSON: 'test/api/live/categories.json'
 };
 
 export default app.Config;

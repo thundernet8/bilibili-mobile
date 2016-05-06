@@ -18,6 +18,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 import Config from '../scripts/config';
+import {Link} from 'react-router';
 
 
 let LiveAD = React.createClass({
@@ -51,57 +52,62 @@ let LiveAD = React.createClass({
 });
 
 
-let LiveChannelBlock = React.createClass({
-    displayName: 'LiveChannelBlock',
+let LiveCategoryBlock = React.createClass({
+    displayName: 'LiveCategoryBlock',
     getInitialState: function(){
         return {
-            channelIcon: '',
-            channelName: '',
+            categoryIcon: '',
+            categoryName: '',
+            categorySlug: '',
             moreText: '进去看看',
             list: []
         }
     },
     componentDidMount: function(){
-        const channelIcon = this.props.partition.sub_icon.src;
-        const channelName = this.props.partition.name;
+        const categoryIcon = this.props.partition.sub_icon.src;
+        const categoryName = this.props.partition.name;
+        const categorySlug = this.props.partition.slug;
         const liveCount = this.props.lives.length;
         let list = [];
         for(let i=0; i<liveCount; i++){
             const item = this.props.lives[i];
             list.push(
                 <li key={item.room_id}>
-                    <div className="cover">
-                        <img src={item.cover.src} alt={item.title} />
-                        <img src={item.owner.face} alt={item.owner.name} />
+                    <div className="thumb">
+                        <img src={item.cover.src} alt={item.title} className="cover" />
+                        <img src={item.owner.face} alt={item.owner.name} className="avatar" />
                     </div>
                     <h4>{item.owner.name}</h4>
                     <div className="meta">
                         <span className="online-count">{item.online}</span>
-                        <span className="channel-des">{item.title}</span>
+                        <span className="category-des">{item.title}</span>
                     </div>
                 </li>
             );
         }
         this.setState({
-            channelIcon: channelIcon,
-            channelName: channelName,
+            categoryIcon: categoryIcon,
+            categoryName: categoryName,
+            categorySlug: categorySlug,
             list: list
         });
     },
     render: function(){
         return (
-            <section className="channel-block">
-                <header className="channel-block-header">
-                    <div className="channel-info">
-                        <img className="channel-icon" src={this.state.channelIcon} />
-                        <span className="channel-name">{this.state.channelName}</span>
+            <section className="category-block">
+                <header className="category-block-header">
+                    <div className="category-info">
+                        <img className="category-icon" src={this.state.categoryIcon} />
+                        <span className="category-name">{this.state.categoryName}</span>
                     </div>
                     <div className="more-link">
-                        <span className="more-text">{this.state.moreText}</span>
-                        <img className="more-icon" src="dist/images/icons/btn_icon_enter.png" />
+                        <Link to={"/live/category/"+this.state.categorySlug}>
+                            <span className="more-text">{this.state.moreText}</span>
+                            <img className="more-icon" src="dist/images/icons/btn_icon_enter.png" />
+                        </Link>
                     </div>
                 </header>
-                <div className="channel-block-content">
+                <div className="category-block-content">
                     {this.state.list}
                 </div>
             </section>
@@ -111,11 +117,11 @@ let LiveChannelBlock = React.createClass({
 
 
 export default React.createClass({
-    displayName: 'LiveIndexChannels',
+    displayName: 'LiveIndexCategories',
     getInitialState: function(){
         return {
             banner: [],
-            channelList: [],
+            categoryList: [],
             isLoad: false,
             error: false
         }
@@ -130,7 +136,7 @@ export default React.createClass({
             success: function(data){
                 data = data.data || {};
                 let banner=[];
-                let channelList=[];
+                let categoryList=[];
                 if(data.hasOwnProperty('bannerLives')){
                     banner.push(<LiveAD key="ad" display={true} banner={data.bannerLives[0]} />);
                 }
@@ -139,7 +145,7 @@ export default React.createClass({
                     const len = data.partitions.length;
                     for(let i=0; i<len; i++){
                         let item = data.partitions[i];
-                        channelList.push(<LiveChannelBlock key={"channel_block_"+i} partition={item.partition} lives={item.lives} />);
+                        categoryList.push(<LiveCategoryBlock key={"category_block_"+i} partition={item.partition} lives={item.lives} />);
                     }
                 }
 
@@ -147,7 +153,7 @@ export default React.createClass({
                     if(this.isMounted()){
                         this.setState({
                             banner: banner,
-                            channelList: channelList,
+                            categoryList: categoryList,
                             isLoad: true
                         })
                     }
@@ -175,15 +181,15 @@ export default React.createClass({
     render: function(){
         if(this.state.error){
             return (
-                <section className="live-channel-wrap error">
+                <section className="live-category-wrap error">
                     an error occurred!
                 </section>
             );
         }
         return (
-            <section className="live-channel-wrap">
+            <section className="live-category-wrap">
                 {this.state.banner}
-                {this.state.channelList}
+                {this.state.categoryList}
             </section>
         );
     }

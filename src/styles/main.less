@@ -9,8 +9,10 @@
 }
 
 *{
+  -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color : transparent;  //解决移动浏览器下Tap点击出现高亮黑色背景
   -webkit-overflow-scrolling: touch;
+  -webkit-user-select:none; //禁止长按菜单
 }
 
 body, html{
@@ -58,6 +60,10 @@ a{
   &:hover{
     color: #f25d8e;
   }
+}
+
+img{
+  max-width: 100%;
 }
 
 #content, #app, #general-view, #tab-view-wrap{
