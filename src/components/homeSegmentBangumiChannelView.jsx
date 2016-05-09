@@ -16,9 +16,9 @@
 'use strict';
 
 import React from 'react';
-import BangumiRecommendView from 'homeSegmentBangumiRecommendView.jsx';
-import BangumiDailyView from 'homeSegmentBangumiDailyView.jsx';
-import BangumiIndexView from 'homeSegmentBangumiIndexView.jsx';
+import BangumiRecommendView from './homeSegmentBangumiRecommendView.jsx';
+import BangumiDailyView from './homeSegmentBangumiDailyView.jsx';
+import BangumiIndexView from './homeSegmentBangumiIndexView.jsx';
 
 
 export default React.createClass({

@@ -29,11 +29,14 @@ export default React.createClass({
         const gotoLiveRegion = function(){
             Utils.setStatus('homeTabSegmentIndex', 0);
         };
+        const gotoBangumiRegion = function(){
+            Utils.setStatus('homeTabSegmentIndex', 1);
+        };
         return (
             <section id="region-items">
                 <ul>
                     <li className="live"><a href="javascript:void 0" onClick={gotoLiveRegion}><div className="icon-bg"><i className="icon" /></div><span>直播</span></a></li>
-                    <li className="bangumi"><Link to="/region/bangumi"><div className="icon-bg"><i className="icon" /></div><span>番剧</span></Link></li>
+                    <li className="bangumi"><a href="javascript:void 0" onClick={gotoBangumiRegion}><div className="icon-bg"><i className="icon" /></div><span>番剧</span></a></li>
                     <li className="cartoon"><Link to="/region/cartoon"><div className="icon-bg"><i className="icon" /></div><span>动画</span></Link></li>
                     <li className="music"><Link to="/region/music"><div className="icon-bg"><i className="icon" /></div><span>音乐</span></Link></li>
                     <li className="dance"><Link to="/region/dance"><div className="icon-bg"><i className="icon" /></div><span>舞蹈</span></Link></li>

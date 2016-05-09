@@ -110,7 +110,7 @@ export default React.createClass({
         }else if(this.state.isLoad){
             TagList = <div className="tag-list">{this.state.list}</div>;
         }else{
-            TagList = <div className="tag-list" />;
+            TagList = <div className="tag-list"></div>;
         }
         return (
             <div id="bangumi-index">

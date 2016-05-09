@@ -3,7 +3,7 @@
  * All right reserved.
  *
  * @author WuXueqian
- * @date 16/4/9 20:43
+ * @date 16/5/9 21:00
  * @license MIT LICENSE
  */
 
@@ -15,31 +15,26 @@
 
 'use strict';
 
-window.app = window.app || {};
-
-import Header from '../components/header.jsx';
-import Footer from '../components/footer.jsx';
-import jQuery from 'jquery';
-import Config from '../scripts/config';
 import React from 'react';
+import Utils from '../scripts/utils';
+import Config from '../scripts/config';
+import Header from './header.jsx';
 
 
-/*
- * 直播分类详情视图
- */
 export default React.createClass({
-    displayName: 'LiveCategoryView',
+    displayName: 'HomeBangumiCategoryView',
     getInitialState: function(){
         return {
             categoryName: '',
             categoryIcon: '',
             isLoad: false,
+            page: 1,
             error: false
         }
     },
     getCategoryVideos: function(){
-        const slug = this.props.params.slug;
-        const url = Config.liveCategoriesAPIJSON;
+        const id = this.props.params.id;
+        const url = Config.liveCategoriesAPIJSON;  //TODO
         jQuery.ajax({
             context: this,
             method: 'get',
@@ -47,7 +42,7 @@ export default React.createClass({
             dataType: 'json',
             success: function(data){
                 const categories = data.categories;
-                const category = categories.filter((v)=>v.slug==slug)[0];
+                const category = categories.filter((v)=>v.id==id)[0];
 
                 let loadClear = function(){
                     if(this.isMounted()){
@@ -80,7 +75,7 @@ export default React.createClass({
     render: function (){
         if(this.state.error){
             return (
-                <div id="live-category">
+                <div id="bangumi-category">
                     <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle={this.state.categoryName} />
                     <section className="view-body error">
                         an error occurred
@@ -89,10 +84,10 @@ export default React.createClass({
             );
         }
         return (
-            <div id="live-category">
+            <div id="bangumi-category">
                 <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle={this.state.categoryName} />
                 <section className="view-body">
-                    live category view
+                    bangumi category view
                 </section>
             </div>
         );

@@ -19,6 +19,7 @@ import React from 'react';
 import Config from '../scripts/config';
 import jQuery from 'jquery';
 import Utils from '../scripts/utils';
+import {Link} from 'react-router';
 
 
 let BangumiCatLatestUpdateBlock = React.createClass({
@@ -130,8 +131,10 @@ let BangumiCatOneRowBlock = React.createClass({
                         <span className="cat-name">{this.state.catName}</span>
                     </div>
                     <div className="more-link">
-                        <span className="more-text">{this.state.moreText}</span>
-                        <img className="more-icon" src="dist/images/icons/btn_icon_enter.png" />
+                        <Link to={"/bangumi/category/"+this.state.catID}>
+                            <span className="more-text">{this.state.moreText}</span>
+                            <img className="more-icon" src="dist/images/icons/btn_icon_enter.png" />
+                        </Link>
                     </div>
                 </header>
                 <div className="cat-block-content">

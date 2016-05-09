@@ -2,28 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048af311-4dc1-4ff5-84dd-f8603ecdb932" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/homeSegmentLiveUncategoryView.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/liveCategoryView.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/live/categories.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/app-3e04a2acb8.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/main-08cbb70d3d.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/LiveChannelView.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/homeSegmentLiveChannelList.jsx" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/homeSegmentLiveIndexChannels.jsx" afterPath="$PROJECT_DIR$/src/components/homeSegmentLiveIndexCategories.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/homeBangumiCategoryView.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/widgets.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/category/completed_cartoon.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/category/extension_cartoon.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/category/native_cartoon.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/category/serial_cartoon.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/tag/103.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/tag/117.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/tag/121.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/tag/122.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/tag/128.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/tag/81.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/api/bangumi/tag/89.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/scripts/app-467da2c1db.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/styles/main-d931b0b068.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/images/launch_bg.png" afterPath="$PROJECT_DIR$/dist/images/launch_bg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/launch_bg.png" afterPath="$PROJECT_DIR$/src/images/launch_bg.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index-offline.html" afterPath="$PROJECT_DIR$/index-offline.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/header.jsx" afterPath="$PROJECT_DIR$/src/components/header.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/homeLiveCategoryView.jsx" afterPath="$PROJECT_DIR$/src/components/homeLiveCategoryView.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/homeSegmentBangumiChannelView.jsx" afterPath="$PROJECT_DIR$/src/components/homeSegmentBangumiChannelView.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx" afterPath="$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/homeSegmentBangumiIndexView.jsx" afterPath="$PROJECT_DIR$/src/components/homeSegmentBangumiIndexView.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/homeSegmentRegion.jsx" afterPath="$PROJECT_DIR$/src/components/homeSegmentRegion.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tab.jsx" afterPath="$PROJECT_DIR$/src/components/tab.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rev/rev-manifest.json" afterPath="$PROJECT_DIR$/src/rev/rev-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scripts/config.js" afterPath="$PROJECT_DIR$/src/scripts/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scripts/routes.jsx" afterPath="$PROJECT_DIR$/src/scripts/routes.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scripts/utils.js" afterPath="$PROJECT_DIR$/src/scripts/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/main.less" afterPath="$PROJECT_DIR$/src/styles/main.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/modules/tab.less" afterPath="$PROJECT_DIR$/src/styles/modules/tab.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/modules/views.less" afterPath="$PROJECT_DIR$/src/styles/modules/views.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/api/live/home.json" afterPath="$PROJECT_DIR$/test/api/live/home.json" />
     </list>
     <ignored path="bilibili-mobile.iws" />
@@ -45,21 +51,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="homeSegmentBangumiIndexCats.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx">
+      <file leaf-file-name="homeSegmentBangumiChannelView.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiChannelView.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="186" column="16" selection-start-line="186" selection-start-column="16" selection-end-line="202" selection-end-column="17" />
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="liveCategoryView.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/liveCategoryView.jsx">
+      <file leaf-file-name="homeSegmentBangumiIndexView.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexView.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
+              <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="widgets.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/widgets.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homeLiveCategoryView.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/homeLiveCategoryView.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -67,71 +93,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeSegmentLiveUncategoryView.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveUncategoryView.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="36" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/styles/modules/views.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.458334">
-              <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
-              <folding>
-                <element signature="e#577#1280#0" expanded="false" />
-                <element signature="e#1334#2403#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tab.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tab.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/modules/tab.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6839237">
-              <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
+            <state vertical-scroll-proportion="-14.875">
+              <caret line="455" column="25" selection-start-line="455" selection-start-column="25" selection-end-line="455" selection-end-column="25" />
               <folding>
-                <element signature="e#6217#6243#0" expanded="false" />
-                <element signature="e#6314#7402#0" expanded="false" />
-                <element signature="e#7428#8575#0" expanded="false" />
-                <element signature="e#8804#9564#0" expanded="false" />
-                <element signature="e#8947#9184#0" expanded="false" />
-                <element signature="e#9031#9172#0" expanded="false" />
-                <element signature="e#9216#9554#0" expanded="false" />
-                <element signature="e#9434#9542#0" expanded="false" />
-                <element signature="e#9920#11185#0" expanded="false" />
-                <element signature="e#10133#10209#0" expanded="false" />
-                <element signature="e#14322#14465#0" expanded="false" />
+                <element signature="e#1284#6218#0" expanded="false" />
+                <element signature="e#6240#6266#0" expanded="false" />
+                <element signature="e#6337#7425#0" expanded="false" />
+                <element signature="e#7451#8598#0" expanded="false" />
+                <element signature="e#8970#9207#0" expanded="false" />
+                <element signature="e#9054#9195#0" expanded="false" />
+                <element signature="e#9489#9597#0" expanded="false" />
+                <element signature="e#10188#10264#0" expanded="false" />
+                <element signature="e#14377#14520#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeSegmentLiveCategoryList.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx">
+      <file leaf-file-name="homeBangumiCategoryView.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/homeBangumiCategoryView.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="131" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="131" />
+              <caret line="44" column="58" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeSegmentLiveIndexCategories.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveIndexCategories.jsx">
+      <file leaf-file-name="homeSegmentBangumiIndexCats.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.79782903">
+              <caret line="133" column="71" selection-start-line="133" selection-start-column="66" selection-end-line="133" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scripts/routes.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="50" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <caret line="47" column="110" selection-start-line="47" selection-start-column="110" selection-end-line="47" selection-end-column="110" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,23 +161,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/app.jsx" />
-        <option value="$PROJECT_DIR$/src/components/backForward.jsx" />
-        <option value="$PROJECT_DIR$/dist/styles/main-0b5933f46b.css" />
-        <option value="$PROJECT_DIR$/src/components/liveCategoryList.jsx" />
-        <option value="$PROJECT_DIR$/src/components/TopicDetailView.jsx" />
-        <option value="$PROJECT_DIR$/src/components/topicDetailView.jsx" />
-        <option value="$PROJECT_DIR$/src/components/liveChannelList.jsx" />
-        <option value="$PROJECT_DIR$/src/scripts/app.js" />
-        <option value="$PROJECT_DIR$/src/components/districtItemView.jsx" />
-        <option value="$PROJECT_DIR$/src/components/homeSegmentDistrict.jsx" />
-        <option value="$PROJECT_DIR$/app.manifest" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiHead.jsx" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/bangumiChannelView.jsx" />
-        <option value="$PROJECT_DIR$/src/styles/modules/segmentBar.less" />
-        <option value="$PROJECT_DIR$/src/components/bangumiRecommendView.jsx" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/components/bangumiDailyView.jsx" />
         <option value="$PROJECT_DIR$/src/components/generalView.jsx" />
@@ -184,14 +174,12 @@
         <option value="$PROJECT_DIR$/src/components/bangumiIndexView.jsx" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiCatBlock.jsx" />
         <option value="$PROJECT_DIR$/src/html/index.html" />
-        <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx" />
         <option value="$PROJECT_DIR$/src/components/tabBar.jsx" />
         <option value="$PROJECT_DIR$/src/styles/modules/tabBar.less" />
         <option value="$PROJECT_DIR$/src/components/tab.jsx" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentLiveIndexChannels.jsx" />
         <option value="$PROJECT_DIR$/src/styles/main.less" />
         <option value="$PROJECT_DIR$/src/components/header.jsx" />
-        <option value="$PROJECT_DIR$/src/components/homeSegmentRegion.jsx" />
         <option value="$PROJECT_DIR$/src/scripts/utils.js" />
         <option value="$PROJECT_DIR$/src/components/liveChannelView.jsx" />
         <option value="$PROJECT_DIR$/src/scripts/config.js" />
@@ -199,12 +187,31 @@
         <option value="$PROJECT_DIR$/src/components/homeSegmentLiveChannelList.jsx" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentLiveUncategoryView.jsx" />
         <option value="$PROJECT_DIR$/src/components/liveCategoryView.jsx" />
-        <option value="$PROJECT_DIR$/src/scripts/routes.jsx" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx" />
         <option value="$PROJECT_DIR$/src/styles/modules/views.less" />
-        <option value="$PROJECT_DIR$/test/api/live/home.json" />
         <option value="$PROJECT_DIR$/src/components/homeSegmentLiveIndexCategories.jsx" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiChannelView.jsx" />
+        <option value="$PROJECT_DIR$/test/api/live/home.json" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentRegion.jsx" />
+        <option value="$PROJECT_DIR$/src/components/bangumiCategoryDetailView.jsx" />
+        <option value="$PROJECT_DIR$/src/components/homeLiveCategoryView.jsx" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiIndexView.jsx" />
+        <option value="$PROJECT_DIR$/src/components/widgets.jsx" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/category/native_cartoon.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/category/completed_cartoon.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/category/serial_cartoon.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/category/extension_cartoon.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/tag/81.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/tag/89.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/tag/122.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/tag/103.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/tag/117.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/tag/128.json" />
+        <option value="$PROJECT_DIR$/test/api/bangumi/tag/121.json" />
+        <option value="$PROJECT_DIR$/src/scripts/routes.jsx" />
         <option value="$PROJECT_DIR$/src/styles/modules/tab.less" />
+        <option value="$PROJECT_DIR$/src/components/homeBangumiCategoryView.jsx" />
+        <option value="$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx" />
       </list>
     </option>
   </component>
@@ -261,6 +268,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -328,8 +336,26 @@
               <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="live" />
+              <option name="myItemId" value="bilibili-mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bilibili-mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bangumi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,6 +374,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bangumi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tag" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,11 +495,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -549,16 +582,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18799368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26698261" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32678387" sideWeight="0.49815693" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24301966" sideWeight="0.51026857" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32574975" sideWeight="0.49605057" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32678387" sideWeight="0.49815693" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18717684" sideWeight="0.48973143" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18097208" sideWeight="0.48973143" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -566,6 +598,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32574975" sideWeight="0.49605057" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -615,118 +648,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/react-router/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/footer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31413612">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/regionView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66753924">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/topicDetailView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66753924">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/videoDetailView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5301047">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rev/rev-manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8836524">
-          <caret line="129" column="16" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.manifest">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/backForward.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.458334">
-          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/kitchen-sink-master/assets/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/app.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/generalView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/modules/animation.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tags.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="246" column="1" selection-start-line="246" selection-start-column="1" selection-end-line="246" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -786,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bangumiRecommendView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3686934">
-          <caret line="26" column="100" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -821,13 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/api/bangumi/index_page.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1081" column="20" selection-start-line="1081" selection-start-column="11" selection-end-line="1081" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tabBar.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -839,15 +746,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.625">
           <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bangumiDailyView.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiDailyView.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3448276">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="30" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.0674603">
           <caret line="196" column="22" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,25 +770,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentRegion.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4789272">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/utils.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3678161">
           <caret line="66" column="42" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="186" column="16" selection-start-line="186" selection-start-column="16" selection-end-line="202" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,59 +785,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/api/live/categories.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.020435967">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bangumiIndexView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019788919">
-          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/bangumiChannelView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="100" selection-start-line="43" selection-start-column="100" selection-end-line="43" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/liveCategoryView.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/routes.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/modules/views.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.458334">
+        <state vertical-scroll-proportion="0.0">
           <caret line="159" column="1" selection-start-line="159" selection-start-column="1" selection-end-line="159" selection-end-column="1" />
           <folding>
             <element signature="e#577#1280#0" expanded="false" />
@@ -957,64 +803,266 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="131" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="131" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveUncategoryView.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="36" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="36" />
           <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39267015">
+          <caret line="27" column="197" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="197" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiRecommendView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="100" selection-start-line="26" selection-start-column="74" selection-end-line="26" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/topicDetailView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/videoDetailView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeLiveCategoryView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
+          <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/api/live/home.json">
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentRegion.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5735695">
-          <caret line="666" column="25" selection-start-line="666" selection-start-column="25" selection-end-line="666" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.13612565">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/widgets.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/category/native_cartoon.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="669" column="1" selection-start-line="669" selection-start-column="1" selection-end-line="669" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/category/completed_cartoon.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4054054">
+          <caret line="20" column="74" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/category/extension_cartoon.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="669" column="1" selection-start-line="669" selection-start-column="1" selection-end-line="669" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tag/81.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="3137" column="1" selection-start-line="3137" selection-start-column="1" selection-end-line="3137" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tag/89.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="2651" column="1" selection-start-line="2651" selection-start-column="1" selection-end-line="2651" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tag/122.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="2902" column="1" selection-start-line="2902" selection-start-column="1" selection-end-line="2902" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tag/103.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="2827" column="1" selection-start-line="2827" selection-start-column="1" selection-end-line="2827" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tag/117.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="3310" column="1" selection-start-line="3310" selection-start-column="1" selection-end-line="3310" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tag/128.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="2992" column="1" selection-start-line="2992" selection-start-column="1" selection-end-line="2992" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tag/121.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9594595">
+          <caret line="2898" column="1" selection-start-line="2898" selection-start-column="1" selection-end-line="2898" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/index_page.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.3864865">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding>
-            <element signature="e#401#688#0" expanded="false" />
-            <element signature="e#706#1230#0" expanded="false" />
-            <element signature="e#1251#1452#0" expanded="false" />
-            <element signature="e#1471#1629#0" expanded="false" />
+            <element signature="e#319#5672#0" expanded="false" />
+            <element signature="e#5927#11255#0" expanded="false" />
+            <element signature="e#11513#16795#0" expanded="false" />
+            <element signature="e#17052#22412#0" expanded="false" />
+            <element signature="e#22674#28056#0" expanded="false" />
+            <element signature="e#28322#33715#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/tags.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.9864864">
+          <caret line="246" column="1" selection-start-line="246" selection-start-column="1" selection-end-line="246" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/bangumi/category/serial_cartoon.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8783784">
+          <caret line="669" column="1" selection-start-line="669" selection-start-column="1" selection-end-line="669" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveIndexCategories.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="50" selection-start-line="103" selection-start-column="50" selection-end-line="103" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.58900523">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="77" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentLiveCategoryList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4712042">
+          <caret line="31" column="131" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiChannelView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeBangumiCategoryView.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="58" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/api/live/home.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8108108">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/modules/tab.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6839237">
-          <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
+        <state vertical-scroll-proportion="-14.875">
+          <caret line="455" column="25" selection-start-line="455" selection-start-column="25" selection-end-line="455" selection-end-column="25" />
           <folding>
-            <element signature="e#6217#6243#0" expanded="false" />
-            <element signature="e#6314#7402#0" expanded="false" />
-            <element signature="e#7428#8575#0" expanded="false" />
-            <element signature="e#8804#9564#0" expanded="false" />
-            <element signature="e#8947#9184#0" expanded="false" />
-            <element signature="e#9031#9172#0" expanded="false" />
-            <element signature="e#9216#9554#0" expanded="false" />
-            <element signature="e#9434#9542#0" expanded="false" />
-            <element signature="e#9920#11185#0" expanded="false" />
-            <element signature="e#10133#10209#0" expanded="false" />
-            <element signature="e#14322#14465#0" expanded="false" />
+            <element signature="e#1284#6218#0" expanded="false" />
+            <element signature="e#6240#6266#0" expanded="false" />
+            <element signature="e#6337#7425#0" expanded="false" />
+            <element signature="e#7451#8598#0" expanded="false" />
+            <element signature="e#8970#9207#0" expanded="false" />
+            <element signature="e#9054#9195#0" expanded="false" />
+            <element signature="e#9489#9597#0" expanded="false" />
+            <element signature="e#10188#10264#0" expanded="false" />
+            <element signature="e#14377#14520#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/routes.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="110" selection-start-line="47" selection-start-column="110" selection-end-line="47" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/homeSegmentBangumiIndexCats.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79782903">
+          <caret line="133" column="71" selection-start-line="133" selection-start-column="66" selection-end-line="133" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
