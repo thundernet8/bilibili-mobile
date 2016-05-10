@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 import Header from '../components/header.jsx';
 import TabBar from '../components/tabBar.jsx';
@@ -29,5 +29,7 @@ app.GeneralView = React.createClass({
         return this.props.children;
     }
 });
+
+window.app = app;
 
 export default app.GeneralView;

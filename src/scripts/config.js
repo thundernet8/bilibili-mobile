@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 app.Config = {
     APIType: 'json',
@@ -26,7 +26,12 @@ app.Config = {
     bangumiIndexAPIUrl: '',
     liveHomeAPIJSON: 'test/api/live/home.json',
     liveHomeAPIUrl: 'http://live.bilibili.com/mobile/home?actionKey=appkey&appkey=27eb53fc9058f8c3&build=101130&device=phone&platform=ios&scale=2&sign=079a5f6d575506d0fedf59afa13dea04&ts=1461582272',
-    liveCategoriesAPIJSON: 'test/api/live/categories.json'
+    liveCategoriesAPIJSON: 'test/api/live/categories.json',
+    bangumiCategoryAPIJSON: 'test/api/bangumi/tag/',
+    bangumiCategoryVideosPerPage: 30,
+    bangumiCartoonAPIJSON: 'test/api/bangumi/cartoon/'
 };
+
+window.app = app;
 
 export default app.Config;

@@ -158,3 +158,158 @@
   background: #f5f5f5;
   z-index: 1020;
 }
+
+
+/* HomeTab-BangumiSegment-Bangumi Category Detail View */
+
+#bangumi-category{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top:49px;
+  background: #f5f5f5;
+  z-index: 1020;
+
+  .view-body{
+
+    .video{
+      overflow: hidden;
+
+      &.col-1{
+        border-bottom: 1px solid #eaeaea;
+        margin: 0 auto;
+
+        &:last-child{
+          border-bottom: none;
+        }
+
+        .inner-wrap{
+          position: relative;
+          margin: 10px;
+          min-height: 100px;
+        }
+
+        .video-cover{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 80px;
+          height: 100px;
+        }
+
+        .video-info{
+          position: relative;
+          padding-left: 90px;
+
+          h2{
+            margin: 0;
+            font-size: 1.6rem;
+            line-height: 30px;
+            font-weight: normal;
+            color: #343536;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .video-brief{
+            font-size: 1.2rem;
+            line-height: 25px;
+            color: #888888;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .video-status{
+            font-size: 1.2rem;
+            line-height: 25px;
+            color: #888888;
+          }
+
+          .video-meta{
+            font-size: 1.3rem;
+            line-height: 20px;
+            color: #888888;
+
+            .last-time{
+              margin-left: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .cartoon-video{
+      overflow: hidden;
+
+      &.col-1{
+        border-bottom: 1px solid #eaeaea;
+        margin: 0 auto;
+
+        &:last-child{
+          border-bottom: none;
+        }
+
+        .inner-wrap{
+          position: relative;
+          margin: 10px;
+          min-height: 75px;
+        }
+
+        .video-cover{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 120px;
+          height: 75px;
+          border-radius: 5px;
+        }
+
+        .video-info{
+          position: relative;
+          padding-left: 130px;
+
+          h2{
+            margin: 0;
+            font-size: 1.6rem;
+            line-height: 20px;
+            height: 40px;
+            font-weight: normal;
+            color: #343536;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            //text-indent: -8px;
+          }
+
+          .video-meta{
+            margin-top: 10px;
+            font-size: 1.3rem;
+            line-height: 20px;
+            color: #888888;
+
+            &>span{
+              display: inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+
+            .author{
+              max-width: e('calc(100% - 80px)');
+            }
+
+            .play{
+              max-width: 80px;
+              margin-left: 16px;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

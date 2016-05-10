@@ -28,6 +28,7 @@ import BangumiRecommendView from '../components/homeSegmentBangumiRecommendView.
 import BangumiDailyView from '../components/homeSegmentBangumiDailyView.jsx';
 import BangumiIndexView from '../components/homeSegmentBangumiIndexView.jsx';
 import BangumiCategoryView from '../components/homeBangumiCategoryView.jsx';
+import BangumiCartoonCategoryView from '../components/homeBangumiCartoonCategoryView.jsx';
 import RegionView from '../components/regionView.jsx';
 import Tab from '../components/tab.jsx';
 import BackForward from '../components/backForward.jsx';
@@ -42,10 +43,15 @@ let routes = (
                     <Route name="liveAll" path="/live/all" component={LiveUnCategoryView} />
 
                     <Route name="bangumi" path="/bangumi/:type" component={BangumiChannelView} />
+                    {/*
                     <Route name="bangumi_recommend" path="/bangumi/recommend" component={BangumiRecommendView} />
                     <Route name="bangumi_daily" path="/bangumi/daily" component={BangumiDailyView} />
                     <Route name="bangumi_index" path="/bangumi/index" component={BangumiIndexView} />
+                    */}
                     <Route name="bangumi_category" path="/bangumi/category/:id" component={BangumiCategoryView} />
+
+                    <Route name="bangumi_cartoon" path="/bangumi/cartoon/:type" component={BangumiCartoonCategoryView} />
+
                 </Route>
                 <Route name="focusTab" path="/focus" component={Tab.FocusTab} />
                 <Route name="findTab" path="/find" component={Tab.FindTab} />

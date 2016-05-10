@@ -3,7 +3,7 @@
  * All right reserved.
  *
  * @author WuXueqian
- * @date 16/5/9 21:00
+ * @date 16/5/10 22:34
  * @license MIT LICENSE
  */
 
@@ -22,11 +22,10 @@ import Header from './header.jsx';
 
 
 export default React.createClass({
-    displayName: 'HomeBangumiCategoryView',
+    displayName: 'HomeBangumiCartoonCategoryView',
     getInitialState: function(){
         return {
             categoryName: '',
-            categoryCover: '',
             isLoad: false,
             page: 1,
             totalPages: 1,
@@ -36,36 +35,33 @@ export default React.createClass({
             error: false
         }
     },
-    getCategoryVideos: function(page){
-        const id = this.props.params.id;
-        const url = Config.bangumiCategoryAPIJSON + id + '.json';  //TODO page
+    getCartoonVideos: function(page){
+        const type = this.props.params.type;
+        const url = Config.bangumiCartoonAPIJSON + type + '_cartoon.json';  //TODO page
         jQuery.ajax({
             context: this,
             method: 'get',
             url: url,
             dataType: 'json',
             success: function(data){
-                const videos = data.result;
+                const videos = data.list;
 
-                if(videos.length){
-                    const category = videos[0]['tags'].filter((t)=>t.tag_id==id)[0];
-
+                if(videos['0']){
                     let list=[];
-                    for(let i=0; i<videos.length; i++){
-                        const video=videos[i];
+                    for(let key in videos){
+                        const video = videos[key];
+                        if(typeof video !== "object")continue;
                         list.push(
-                            <li key={video.season_id} className="video col-1">
+                            <li key={video.aid} className="cartoon-video col-1">
                                 <div className="inner-wrap">
-                                    <img className="video-cover" src={video.cover} alt={video.bangumi_title} />
+                                    <img className="video-cover" src={video.pic} alt={video.title} />
                                     <div className="video-info">
-                                        <h2>{video.bangumi_title}</h2>
-                                        <div className="video-brief">{video.brief}</div>
-                                        <div className="video-status">{video.is_finish?video.total_count+"话全":"连载中, 最新更新 第 "+video.newest_ep_index+" 话" }</div>
+                                        <h2>{video.title}</h2>
                                         <div className="video-meta">
-                                            <span className="subscribe-count">{(parseInt(video.danmaku_count)/10000).toFixed(1)+"万人订阅"}</span>
-                                            <span className="last-time">{video.last_time.substr(0,7).replace(/[-]/, '年')+'月'}</span>
+                                            <span className="author">{"UP主: "+video.author}</span>
+                                            <span className="play">{"播放: "+(parseInt(video.play)>=10000?(parseInt(video.play)/10000).toFixed(1)+"万":video.play)}</span>
                                         </div>
-                               </div>
+                                    </div>
                                 </div>
                             </li>
                         );
@@ -74,10 +70,9 @@ export default React.createClass({
                     let loadClear = function(){
                         if(this.isMounted()){
                             this.setState({
-                                categoryName: category.tag_name,
-                                categoryCover: category.cover,
+                                categoryName: data.name,
                                 totalPages: data.pages,
-                                totalCount: data.count,
+                                totalCount: data.num,
                                 list: list,
                                 isLoad: true
                             })
@@ -102,7 +97,7 @@ export default React.createClass({
         });
     },
     componentDidMount: function(){
-        this.getCategoryVideos(this.state.page);
+        this.getCartoonVideos(this.state.page);
     },
     render: function (){
         if(this.state.error){

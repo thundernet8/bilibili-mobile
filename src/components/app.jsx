@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 import React from 'react';
 
@@ -27,5 +27,7 @@ app.Root = React.createClass({
         );
     }
 });
+
+window.app = app;
 
 export default app.Root;

@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 import React from 'react';
 import {Link} from 'react-router';
@@ -174,5 +174,7 @@ Header.BasicNaviController = React.createClass({
 });
 
 app.Header = Header;
+
+window.app = app;
 
 export default app.Header;

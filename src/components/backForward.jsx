@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 import React from 'react';
 
@@ -26,5 +26,7 @@ app.BackForward = React.createClass({
         return (<div></div>);
     }
 });
+
+window.app = app;
 
 export default app.BackForward;

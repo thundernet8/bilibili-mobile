@@ -16,7 +16,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 app.Utils = {
     /**
@@ -94,5 +94,7 @@ app.Utils = {
         console.warn('Inform event for key: '+key);
     }
 };
+
+window.app = app;
 
 export default app.Utils;

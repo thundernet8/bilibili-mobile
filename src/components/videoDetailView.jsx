@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 import Header from '../components/header.jsx';
 import Footer from '../components/footer.jsx';
@@ -31,5 +31,7 @@ app.VideoDetailView = React.createClass({
         );
     }
 });
+
+window.app = app;
 
 export default app.VideoDetailView;

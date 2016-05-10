@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 import React from 'react';
 import {IndexLink, Link} from 'react-router';
@@ -43,5 +43,7 @@ let TabBar = React.createClass({
 });
 
 app.TabBar = TabBar;
+
+window.app = app;
 
 export default app.TabBar;

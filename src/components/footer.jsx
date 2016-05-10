@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 import React from 'react';
 
@@ -38,5 +38,7 @@ let Footer = React.createClass({
 });
 
 app.Footer = Footer;
+
+window.app = app;
 
 export default app.Footer;

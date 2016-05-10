@@ -15,7 +15,7 @@
 
 'use strict';
 
-window.app = window.app || {};
+let app = window.app || {};
 
 import React from 'react';
 import Header from './header.jsx';
@@ -401,5 +401,7 @@ Tab.MeTab = TabHOC(MeTab, 'meTab');
 
 
 app.Tab = Tab;
+
+window.app = app;
 
 export default app.Tab;

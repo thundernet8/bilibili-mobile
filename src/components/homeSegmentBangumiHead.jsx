@@ -29,10 +29,10 @@ export default BangumiHead = {
             return (
                 <section id="bangumi-sort-head-1">
                     <ul>
-                        <li className="serial"><Link to="/bangumi/serial"><i className="icon" /><span>连载动画</span></Link></li>
-                        <li className="completed"><Link to="/bangumi/completed"><i className="icon" /><span>完结动画</span></Link></li>
-                        <li className="domestic"><Link to="/bangumi/domestic"><i className="icon" /><span>国产动画</span></Link></li>
-                        <li className="extension"><Link to="/bangumi/extension"><i className="icon" /><span>官方延伸</span></Link></li>
+                        <li className="serial"><Link to="/bangumi/cartoon/serial"><i className="icon" /><span>连载动画</span></Link></li>
+                        <li className="completed"><Link to="/bangumi/cartoon/completed"><i className="icon" /><span>完结动画</span></Link></li>
+                        <li className="domestic"><Link to="/bangumi/cartoon/domestic"><i className="icon" /><span>国产动画</span></Link></li>
+                        <li className="extension"><Link to="/bangumi/cartoon/extension"><i className="icon" /><span>官方延伸</span></Link></li>
                     </ul>
                 </section>
             );
