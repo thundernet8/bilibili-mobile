@@ -20,6 +20,7 @@ import Header from './header.jsx';
 import PullRefreshIndicator from './pullRefreshIndicator.jsx';
 import jQuery from 'jquery';
 import Config from '../scripts/config';
+import Widget from './widgets.jsx';
 
 
 export default React.createClass({
@@ -103,7 +104,7 @@ export default React.createClass({
         this.getTagList();
     },
     render: function(){
-        const ErrorWidget = <div className="tag-list error">发生了一个错误</div>;
+        const ErrorWidget = <Widget.LoadError text="服务器开了个小差~" cls="tag-list" />;
         let TagList;
         if(this.state.error){
             TagList = ErrorWidget;

@@ -19,6 +19,7 @@ import React from 'react';
 import Utils from '../scripts/utils';
 import Config from '../scripts/config';
 import Header from './header.jsx';
+import Widget from './widgets.jsx';
 
 
 export default React.createClass({
@@ -105,7 +106,7 @@ export default React.createClass({
                 <div id="bangumi-category">
                     <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle={this.state.categoryName} />
                     <section className="view-body error">
-                        an error occurred
+                        <Widget.LoadError text="服务器开了个小差~" />
                     </section>
                 </div>
             );
@@ -114,7 +115,7 @@ export default React.createClass({
             <div id="bangumi-category">
                 <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle={this.state.categoryName} />
                 <section className="view-body">
-                    {this.state.list}
+                    {this.state.isLoad?this.state.list:<Widget.CoverLoading text="哔哩哔哩~" />}
                 </section>
             </div>
         );

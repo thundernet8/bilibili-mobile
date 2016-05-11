@@ -18,19 +18,25 @@
 import {Router, Route, hashHistory, browserHistory} from 'react-router';
 
 import App from '../components/app.jsx';
+
 import GeneralView from '../components/generalView.jsx';
+
 import VideoDetailView from '../components/videoDetailView.jsx';
 import TopicDetailView from '../components/topicDetailView.jsx';
+
 import LiveCategoryView from '../components/homeLiveCategoryView.jsx';
-import LiveUnCategoryView from '../components/homeSegmentLiveUncategoryView.jsx';
+
 import BangumiChannelView from '../components/homeSegmentBangumiChannelView.jsx';
 import BangumiRecommendView from '../components/homeSegmentBangumiRecommendView.jsx';
 import BangumiDailyView from '../components/homeSegmentBangumiDailyView.jsx';
 import BangumiIndexView from '../components/homeSegmentBangumiIndexView.jsx';
 import BangumiCategoryView from '../components/homeBangumiCategoryView.jsx';
 import BangumiCartoonCategoryView from '../components/homeBangumiCartoonCategoryView.jsx';
-import RegionView from '../components/regionView.jsx';
+
+import RegionView from '../components/homeRegionView.jsx';
+
 import Tab from '../components/tab.jsx';
+
 import BackForward from '../components/backForward.jsx';
 
 //APP路由
@@ -40,7 +46,6 @@ let routes = (
             <Route name="generalView" component={GeneralView}>
                 <Route name="homeTab" path="/" component={Tab.HomeTab}>
                     <Route name="liveCategory" path="/live/category/:slug" component={LiveCategoryView} />
-                    <Route name="liveAll" path="/live/all" component={LiveUnCategoryView} />
 
                     <Route name="bangumi" path="/bangumi/:type" component={BangumiChannelView} />
                     {/*

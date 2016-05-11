@@ -49,6 +49,11 @@
       "slug": "dance",
       "name": "唱见舞见",
       "icon": ""
+    },
+    {
+      "slug": "all",
+      "name": "全部直播",
+      "icon": ""
     }
   ]
 }

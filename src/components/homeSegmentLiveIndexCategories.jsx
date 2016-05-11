@@ -190,6 +190,10 @@ export default React.createClass({
             <section className="live-category-wrap">
                 {this.state.banner}
                 {this.state.categoryList}
+                {/* 全部直播锚点 */}
+                <div className="all-live-anchor">
+                    <Link to={"/live/category/all"}>全部直播</Link>
+                </div>
             </section>
         );
     }

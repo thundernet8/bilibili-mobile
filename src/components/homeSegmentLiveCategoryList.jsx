@@ -36,7 +36,7 @@ export default React.createClass({
                     <li className="wangyou"><Link to="/live/category/wangyou"><i className="icon icon-wangyou" /><span>网络游戏</span></Link></li>
                     <li className="jingji"><Link to="/live/category/jingji"><i className="icon icon-jingji" /><span>电子竞技</span></Link></li>
                     <li className="fangying"><Link to="/live/category/fangying"><i className="icon icon-fangying" /><span>放映厅</span></Link></li>
-                    <li className="all"><Link to="/live/all"><i className="icon icon-all" /><span>全部直播</span></Link></li>
+                    <li className="all"><Link to="/live/category/all"><i className="icon icon-all" /><span>全部直播</span></Link></li>
                 </ul>
             </section>
         );

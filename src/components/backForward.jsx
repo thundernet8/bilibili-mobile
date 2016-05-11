@@ -15,7 +15,7 @@
 
 'use strict';
 
-let app = window.app || {};
+let app = window.app || (window.app={});
 
 import React from 'react';
 

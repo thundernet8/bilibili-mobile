@@ -15,7 +15,7 @@
 
 'use strict';
 
-let app = window.app || {};
+let app = window.app || (window.app={});
 
 import Header from '../components/header.jsx';
 import Footer from '../components/footer.jsx';

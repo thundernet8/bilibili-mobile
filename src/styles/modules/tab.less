@@ -170,6 +170,12 @@
         box-shadow: 0 0 1px 1px #eaeaea;
       }
 
+      .category-block{
+        &:last-of-type{
+          box-shadow: 0 -1px 1px 0px #eaeaea;
+        }
+      }
+
       .live-ad{
         padding: 0;
 
@@ -223,7 +229,7 @@
             list-style: none;
             display: inline-block;
             padding: 0 5px;
-            margin: 5px 0;
+            margin: 5px 0 10px;
             width: 50%;
 
             .thumb{
@@ -253,6 +259,7 @@
               line-height: 25px;
               white-space: nowrap;
               text-overflow: ellipsis;
+              overflow: hidden;
               font-size: 1.2rem;
               font-weight: normal;
             }
@@ -294,6 +301,22 @@
               }
             }
           }
+        }
+      }
+
+      .all-live-anchor{
+        margin-top: -10px;
+        padding: 16px 10px 12px;
+        background: #ffffff;
+
+        &>a{
+          display: block;
+          border-radius: 5px;
+          font-size: 1.2rem;
+          line-height: 30px;
+          color: #343536;
+          background: #f5f5f5;
+          text-align: center;
         }
       }
     }
