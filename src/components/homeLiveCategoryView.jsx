@@ -109,7 +109,7 @@ export default React.createClass({
     render: function (){
         if(this.state.error){
             return (
-                <div id="live-category">
+                <div id="live-category" className="fullscreen-view inset-nav">
                     <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle={this.state.categoryName} />
                     <section className="view-body error">
                         <Widget.LoadError text="服务器开了个小差~" />
@@ -118,7 +118,7 @@ export default React.createClass({
             );
         }
         return (
-            <div id="live-category">
+            <div id="live-category" className="fullscreen-view inset-nav">
                 <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle={this.state.categoryName} />
                 <section className="view-body">
                     {this.state.isLoad?this.state.list:<Widget.CoverLoading text="哔哩哔哩~" />}

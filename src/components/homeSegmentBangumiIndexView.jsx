@@ -114,7 +114,7 @@ export default React.createClass({
             TagList = <div className="tag-list"></div>;
         }
         return (
-            <div id="bangumi-index">
+            <div id="bangumi-index" className="fullscreen-view inset-nav">
                 <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle="番剧索引" />
                 <section className="view-body" onTouchStart={this.onTouchStart} onTouchMove={this.onTouchMove} onTouchEnd={this.onTouchEnd}>
                     <PullRefreshIndicator ref={(p)=>this._pullRefreshIndicator=p} pullStatus="unpull" marginTop={-120} />

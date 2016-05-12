@@ -33,7 +33,7 @@ import BangumiIndexView from '../components/homeSegmentBangumiIndexView.jsx';
 import BangumiCategoryView from '../components/homeBangumiCategoryView.jsx';
 import BangumiCartoonCategoryView from '../components/homeBangumiCartoonCategoryView.jsx';
 
-import RegionView from '../components/homeRegionView.jsx';
+import RegionDetailView from '../components/homeeRegionDetailView.jsx';
 
 import Tab from '../components/tab.jsx';
 
@@ -57,6 +57,8 @@ let routes = (
 
                     <Route name="bangumi_cartoon" path="/bangumi/cartoon/:type" component={BangumiCartoonCategoryView} />
 
+                    <Route name="region" path="/region/:slug" component={RegionDetailView} />
+
                 </Route>
                 <Route name="focusTab" path="/focus" component={Tab.FocusTab} />
                 <Route name="findTab" path="/find" component={Tab.FindTab} />
@@ -65,7 +67,7 @@ let routes = (
             <Route name="videoDetailView" path="/video/:id" component={VideoDetailView} />
             <Route name="topic" path="/article/:id" component={TopicDetailView} />
 
-            <Route name="region" path="/region/:name" component={RegionView} />
+
             <Route name="back" path="/backForward" component={BackForward} />
         </Route>
     </Router>

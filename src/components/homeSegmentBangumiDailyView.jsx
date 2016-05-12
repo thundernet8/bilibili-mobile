@@ -23,7 +23,7 @@ export default React.createClass({
     displayName: 'BangumiDailyView',
     render: function(){
         return (
-            <div id="bangumi-daily">
+            <div id="bangumi-daily" className="fullscreen-view inset-nav">
                 <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle="每日放送" />
                 <section className="view-body">
                     bangumi daily view

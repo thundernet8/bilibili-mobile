@@ -23,7 +23,7 @@ export default React.createClass({
     displayName: 'BangumiRecommendView',
     render: function(){
         return (
-            <div id="bangumi-recommend">
+            <div id="bangumi-recommend" className="fullscreen-view inset-nav">
                 <Header.BasicNaviController leftBtnIconClass="left-arrow" leftBtnPath="/backForward" navBarTitle="番剧推荐" />
                 <section className="view-body">
                     bangumi recommend view

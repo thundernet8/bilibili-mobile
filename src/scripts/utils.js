@@ -16,7 +16,7 @@
 
 'use strict';
 
-let app = window.app || {};
+let app = window.app || (window.app={});
 
 app.Utils = {
     /**
@@ -92,7 +92,15 @@ app.Utils = {
 
         //debug
         console.warn('Inform event for key: '+key);
+    },
+
+    /**
+     * 数字单位格式转换-进'万'单位
+     */
+    formatTenThousandNum: function(num){
+        return parseInt(num)<10000 ? num.toString() : (parseInt(num)/10000).toFixed(1)+'万';
     }
+
 };
 
 window.app = app;

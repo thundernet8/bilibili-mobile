@@ -30,7 +30,9 @@ app.Config = {
     liveCategoryAPIJSON: 'test/api/live/category/',
     bangumiCategoryAPIJSON: 'test/api/bangumi/tag/',
     bangumiCategoryVideosPerPage: 30,
-    bangumiCartoonAPIJSON: 'test/api/bangumi/cartoon/'
+    bangumiCartoonAPIJSON: 'test/api/bangumi/cartoon/',
+
+    regionDetailAPIJSON: 'test/api/region/'
 };
 
 window.app = app;
