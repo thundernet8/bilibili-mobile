@@ -73,15 +73,17 @@ let LiveCategoryBlock = React.createClass({
             const item = this.props.lives[i];
             list.push(
                 <li key={item.room_id}>
-                    <div className="thumb">
-                        <img src={item.cover.src} alt={item.title} className="cover" />
-                        <img src={item.owner.face} alt={item.owner.name} className="avatar" />
-                    </div>
-                    <h4>{item.owner.name}</h4>
-                    <div className="meta">
-                        <span className="online-count">{item.online}</span>
-                        <span className="category-des">{item.title}</span>
-                    </div>
+                    <Link to={'/video/'+'aid'}> {/* TODO change to room detail view */}
+                        <div className="thumb">
+                            <img src={item.cover.src} alt={item.title} className="cover" />
+                            <img src={item.owner.face} alt={item.owner.name} className="avatar" />
+                        </div>
+                        <h4>{item.owner.name}</h4>
+                        <div className="meta">
+                            <span className="online-count">{item.online}</span>
+                            <span className="category-des">{item.title}</span>
+                        </div>
+                    </Link>
                 </li>
             );
         }

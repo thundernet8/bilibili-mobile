@@ -64,7 +64,7 @@ let routes = (
                 <Route name="findTab" path="/find" component={Tab.FindTab} />
                 <Route name="meTab" path="/me" component={Tab.MeTab} />
             </Route>
-            <Route name="videoDetailView" path="/video/:id" component={VideoDetailView} />
+            <Route name="videoDetailView" path="/video/:aid" component={VideoDetailView} />
             <Route name="topic" path="/article/:id" component={TopicDetailView} />
 
 

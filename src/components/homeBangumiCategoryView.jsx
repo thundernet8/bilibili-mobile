@@ -20,6 +20,7 @@ import Utils from '../scripts/utils';
 import Config from '../scripts/config';
 import Header from './header.jsx';
 import Widget from './widgets.jsx';
+import {Link} from 'react-router';
 
 
 export default React.createClass({
@@ -56,18 +57,20 @@ export default React.createClass({
                         const video=videos[i];
                         list.push(
                             <li key={video.season_id} className="video col-1">
-                                <div className="inner-wrap">
-                                    <img className="video-cover" src={video.cover} alt={video.bangumi_title} />
-                                    <div className="video-info">
-                                        <h2>{video.bangumi_title}</h2>
-                                        <div className="video-brief">{video.brief}</div>
-                                        <div className="video-status">{video.is_finish?video.total_count+"话全":"连载中, 最新更新 第 "+video.newest_ep_index+" 话" }</div>
-                                        <div className="video-meta">
-                                            <span className="subscribe-count">{(parseInt(video.danmaku_count)/10000).toFixed(1)+"万人订阅"}</span>
-                                            <span className="last-time">{video.last_time.substr(0,7).replace(/[-]/, '年')+'月'}</span>
+                                <Link to={'/video/'+video.aid}>
+                                    <div className="inner-wrap">
+                                        <img className="video-cover" src={video.cover} alt={video.bangumi_title} />
+                                        <div className="video-info">
+                                            <h2>{video.bangumi_title}</h2>
+                                            <div className="video-brief">{video.brief}</div>
+                                            <div className="video-status">{video.is_finish?video.total_count+"话全":"连载中, 最新更新 第 "+video.newest_ep_index+" 话" }</div>
+                                            <div className="video-meta">
+                                                <span className="subscribe-count">{(parseInt(video.danmaku_count)/10000).toFixed(1)+"万人订阅"}</span>
+                                                <span className="last-time">{video.last_time.substr(0,7).replace(/[-]/, '年')+'月'}</span>
+                                            </div>
                                         </div>
-                               </div>
-                                </div>
+                                    </div>
+                                </Link>
                             </li>
                         );
                     }

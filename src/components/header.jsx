@@ -173,6 +173,39 @@ Header.BasicNaviController = React.createClass({
     }
 });
 
+
+/*
+ * 视频播放页Navigation Controller,仅带左返回按钮
+ */
+Header.VideoNaviController = React.createClass({
+    displayName: 'VideoNaviController',
+    getDefaultProps: function(){
+        return {
+            leftBtnIconClass: 'fa fa-chevron-circle-left',
+            leftBtnText: '',
+            leftBtnPath: ''
+        };
+    },
+    getInitialState: function(){
+        return this.props;
+    },
+    componentWillReceiveProps: function(nextProps){
+        this.setState(nextProps);
+    },
+    render: function(){
+        const LeftLink = this.state.leftBtnPath ? React.createClass({render: function(){return (<Link to={this.props.leftBtnPath}>{this.props.children}</Link>)}}) : React.createClass({render: function(){return (<a href="javascript:">{this.props.children}</a>)}});
+        return (
+            <header className="video-nav-controller">
+                <div className="left-nav-btn">
+                    <LeftLink leftBtnPath={this.state.leftBtnPath}>
+                        <i className={'icon ' + this.state.leftBtnIconClass} />
+                    </LeftLink>
+                </div>
+            </header>
+        );
+    }
+});
+
 app.Header = Header;
 
 window.app = app;

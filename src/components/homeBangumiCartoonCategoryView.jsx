@@ -20,6 +20,7 @@ import Utils from '../scripts/utils';
 import Config from '../scripts/config';
 import Header from './header.jsx';
 import Widget from './widgets.jsx';
+import {Link} from 'react-router';
 
 
 export default React.createClass({
@@ -54,16 +55,18 @@ export default React.createClass({
                         if(typeof video !== "object")continue;
                         list.push(
                             <li key={video.aid} className="cartoon-video col-1">
-                                <div className="inner-wrap">
-                                    <img className="video-cover" src={video.pic} alt={video.title} />
-                                    <div className="video-info">
-                                        <h2>{video.title}</h2>
-                                        <div className="video-meta">
-                                            <span className="author">{"UP主: "+video.author}</span>
-                                            <span className="play">{"播放: "+(parseInt(video.play)>=10000?(parseInt(video.play)/10000).toFixed(1)+"万":video.play)}</span>
+                                <Link to={'/video/'+video.aid}>
+                                    <div className="inner-wrap">
+                                        <img className="video-cover" src={video.pic} alt={video.title} />
+                                        <div className="video-info">
+                                            <h2>{video.title}</h2>
+                                            <div className="video-meta">
+                                                <span className="author">{"UP主: "+video.author}</span>
+                                                <span className="play">{"播放: "+(parseInt(video.play)>=10000?(parseInt(video.play)/10000).toFixed(1)+"万":video.play)}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             </li>
                         );
                     }
